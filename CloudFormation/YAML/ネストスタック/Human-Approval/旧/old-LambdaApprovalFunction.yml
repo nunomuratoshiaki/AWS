@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Lambda function that callback to AWS Step Functions
+Resources:
+  LambdaApprovalFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs14.x
+      CodeUri: .
+      Description: Lambda function that callback to AWS Step Functions
+      MemorySize: 128
+      Timeout: 3
+      Role: >-
+        arn:aws:iam::772008686221:role/AccountCreation2-LambdaApiGatewayIAMRole-VKHXQ5GAQ408
+      Environment:
+        Variables:
+          DEBUG_MODE: 'true'

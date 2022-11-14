@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Create RDS
+Parameters:
+  DBInstanceStorageSize:
+    Type: String
+    Default: 20
+  DBMasterUserName:
+    Type: String
+    Default: dbuser
+    NoEcho: true
+  DBPassword: 
+    Default: dbpassword
+    NoEcho: true
+    Type: String
+  MultiAZ: 
+    Default: true
+    Type: String
+    AllowedValues: [ true, false ]
+
+Resources:
+  RDSsubnetgroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties: 
+      DBSubnetGroupDescription: RDS subnetgroup create
+      DBSubnetGroupName: CF-RDS-subnetgroup
+      SubnetIds: 
+          - !ImportValue VPC-koutiku-PrivateSubnet1A
+          - !ImportValue VPC-koutiku-PrivateSubnet1C
+
+  DBInstance: 
+    Type: AWS::RDS::DBInstance
+    Properties: 
+      DBInstanceIdentifier: CF-RDS
+      Engine: MySQL
+      DBInstanceClass: db.t2.micro
+      StorageType: standard
+      AllocatedStorage: !Ref DBInstanceStorageSize
+      DBName: CFdb1
+      MasterUsername: !Ref DBMasterUserName
+      MasterUserPassword: !Ref DBPassword
+      DBSubnetGroupName: !Ref RDSsubnetgroup
+      PubliclyAccessible: false
+      MultiAZ: !Ref MultiAZ
+      VPCSecurityGroups:
+        - !Ref RDSsecuritygroup
+      CopyTagsToSnapshot: true
+      Tags: 
+        - Key: Name
+          Value: CF-RDS
+
+  RDSsecuritygroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: !ImportValue VPC-koutiku-VPCID
+      GroupName: CF-RDS-securityGP
+      GroupDescription: CF-RDS-securityGP
+      Tags:
+        - Key: Name
+          Value: CF-RDS-securityGP
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          CidrIp: 0.0.0.0/0

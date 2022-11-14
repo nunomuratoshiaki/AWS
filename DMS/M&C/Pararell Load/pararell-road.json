@@ -1,0 +1,61 @@
+{
+    "rules": [
+        {
+            "rule-type": "transformation",
+            "rule-id": "500322631",
+            "rule-name": "500322631",
+            "rule-target": "schema",
+            "object-locator": {
+                "schema-name": "%"
+            },
+            "rule-action": "rename",
+            "value": "TEST",
+            "old-value": null
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "500322632",
+            "rule-name": "500322632",
+            "object-locator": {
+                "schema-name": "TEST",
+                "table-name": "%"
+            },
+            "rule-action": "include"
+        },
+        {
+            "rule-type": "table-settings",
+            "rule-id": "500322633",
+            "rule-name": "500322633",
+            "object-locator": {
+                "schema-name": "TEST",
+                "table-name": "TABLE1"
+            },
+            "parallel-load": {
+                "type": "partitions-list",
+                "partitions":[
+                    "P_FEB"
+                ]
+            }
+        },
+        {
+            "rule-type": "table-settings",
+            "rule-id": "500322634",
+            "rule-name": "500322634",
+            "object-locator": {
+                "schema-name": "TEST",
+                "table-name": "TABLE1"
+            },
+            "parallel-load": {
+                "type": "ranges",
+                "columns":[
+                    "ID"
+                ],
+                "boundaries":[
+                    [
+                        "5000000"
+                    ]
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+	"authMode": "FULL",
+	"namedValues": {
+		"営業担当者名": [
+			"鈴木潤"
+		],
+		"お客様のAWSアカウントに登録するメールアドレス": [
+			"jsuzuki@ashisuto.co.jp"
+		],
+		"企業ドメイン名": [
+			"kka"
+		],
+		"AWS利用申込書": [
+			"https://drive.google.com/open?id=1ncr7yf7XJWjLq0gHN_SVvcfYj8DE2CES"
+		],
+		"営業担当メールアドレス": [
+			"jsuzuki@ashisuto.co.jp"
+		],
+		"お客様企業名, 団体名": [
+			"株式会社アシスト"
+		],
+		"AWS利用申込書を提出いただく前のチェックリスト": [
+			"発行した契約番号が、AWS利用申込書右上の管理番号に記入されているか, 利用申込書の必須項目に抜け漏れが無いか, お客様に署名捺印いただいているか, 社内の署名捺印はできているか"
+		],
+		"アシスタント担当者名": [
+			"鈴木潤"
+		],
+		"Timestamp": [
+			"8/31/2022 12:51:11"
+		],
+		"契約番号": [
+			"1-AWS"
+		],
+		"アシストAWSサポート利用申込書": [
+			"https://drive.google.com/open?id=1LYAa58dihNzZI_3Ocu3fzq3NxwVEShKl"
+		],
+		"アシスタントメールアドレス": [
+			"jsuzuki@ashisuto.co.jp"
+		],
+		"サポート契約形態": [
+			""
+		]
+	},
+	"range": {
+		"columnEnd": 12,
+		"columnStart": 1,
+		"rowEnd": 20,
+		"rowStart": 20
+	},
+	"source": {},
+	"triggerUid": "8179858",
+	"values": [
+		"8/31/2022 12:51:11",
+		"鈴木潤",
+		"jsuzuki@ashisuto.co.jp",
+		"鈴木潤",
+		"jsuzuki@ashisuto.co.jp",
+		"jsuzuki@ashisuto.co.jp",
+		"株式会社アシスト",
+		"kka",
+		"1-AWS",
+		"https://drive.google.com/open?id=1ncr7yf7XJWjLq0gHN_SVvcfYj8DE2CES",
+		"発行した契約番号が、AWS利用申込書右上の管理番号に記入されているか, 利用申込書の必須項目に抜け漏れが無いか, お客様に署名捺印いただいているか, 社内の署名捺印はできているか",
+		"https://drive.google.com/open?id=1LYAa58dihNzZI_3Ocu3fzq3NxwVEShKl",
+		""
+	]
+}

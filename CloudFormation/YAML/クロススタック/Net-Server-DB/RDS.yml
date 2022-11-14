@@ -1,0 +1,353 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: RDS Create
+
+Metadata:
+  AWS::CloudFormation::InterFace:
+    ParameterGroups:
+      - label:
+          default: Amaozn RDS Configration
+        Parameters:
+          - RDSType
+          - RDSInstanceType
+          - DBMasterUserName
+          - RDSInstanceStorageSize
+          - RDSInstanceStorageType
+          - DBPassword
+          - MultiAZ         
+
+      - Label:                                    
+          default: Amazon RDS for MySQL Configration
+        Parameters:
+         - MySQLMajorVersion
+
+      - Label:
+          default: Amaozn RDS for Oracle Configration
+        Parameters:
+          - OracleMajorVersion
+          - LicenseModel
+
+      - Label:
+          default: Amaozn RDS for Postgres
+        Parameters:
+          - PostGresMajorVersion
+
+    ParmeterLabels:
+      RDSType:
+        default: RDSType
+          
+      RDSInstanceType:
+        default: RDSInstanceType
+          
+      DBMasterUserName:
+        default: DBMasterUserName
+          
+      RDSInstanceStorageSize:
+        default: RDSInstanceStorageSize
+          
+      RDSInstanceStorageType:
+        default: RDSInstanceStorageType
+          
+      DBPassword:
+        default: DBPassword
+          
+      MultiAZ:
+        default: MultiAZ
+
+      MySQLMajorVersion:
+        default: MySQLMajorVersion
+
+      OracleMajorVersion:
+        default: OracleMajorVersion
+
+      LicenseModel:
+        default: LicenseModel
+
+      PostGresMajorVersion:
+        default: PostGresMajorVersion
+
+Parameters:
+  ProjectName:
+    Type: String
+
+  EnvironmentName:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - stag
+      - prod  
+   
+  RDSType:
+    Type: String
+    Default: MySQL
+    AllowedValues:
+      - MySQL
+      - Oracle
+      - PostGres
+  
+  RDSInstanceType:
+    Type: String
+    Default: db.t3.micro
+    AllowedValues:
+      - db.t3.micro
+      - db.t3.small
+      - db.r5.large
+      - db.r5.xlarge
+    ConstraintDescription: Must be a valid Amazon RDS instance type.
+ 
+  RDSInstanceStorageSize:
+    Type: String
+    Default: 30
+ 
+  RDSInstanceStorageType:
+    Type: String
+    Default: gp2
+    AllowedValues: 
+      - gp2
+      - IOPS
+ 
+  DBMasterUserName:
+    Type: String
+    Default: admin
+    NoEcho: true
+    MinLength: 1
+    MaxLength: 16
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: must begin with a letter and contaon only alphanumeric characters.
+  
+  DBPassword:
+    Type: String 
+    Default: Nunomuratest2022
+    NoEcho:  true
+    MinLength: 8
+    MaxLength: 41
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+  
+  MultiAZ:
+    Type: String
+    Default: false
+    AllowedValues: 
+    - true
+    - false
+
+  MySQLMajorVersion:
+    Type: String
+    Default: 8.0
+    AllowedValues: 
+      - 5.7
+      - 8.0
+
+  OracleMajorVersion:
+    Type: String
+    Default: 19
+    AllowedValues:
+      - 21
+      - 19
+
+  LicenseModel:
+    Type: String
+    Default: Bring-your-own-license
+
+  PostGresMajorVersion:
+    Type: String
+    Default: 13
+    AllowedValues:
+      - 13
+      - 14
+
+Conditions:
+  RDSMySQL: !Equals
+    - !Ref RDSType
+    - MySQL
+
+  RDSOracle: !Equals
+    - !Ref RDSType
+    - Oracle
+
+  RDSPostGres: !Equals
+    - !Ref RDSType
+    - PostGres
+
+Resources:
+
+#RDS SecurityGroup Create
+  RDSSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: { 'Fn::ImportValue': !Sub '${ProjectName}-${EnvironmentName}-vpc'}
+      GroupDescription: !Sub '${ProjectName}-${EnvironmentName}-rds-sg'
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          CidrIp: { 'Fn::ImportValue': !Sub '${ProjectName}-${EnvironmentName}-vpc-cidr'}
+        - IpProtocol: tcp
+          FromPort: 1521
+          ToPort: 1521
+          CidrIp: { 'Fn::ImportValue': !Sub '${ProjectName}-${EnvironmentName}-vpc-cidr'}
+        - IpProtocol: tcp
+          FromPort: 5432
+          ToPort: 5432
+          CidrIp: { 'Fn::ImportValue': !Sub '${ProjectName}-${EnvironmentName}-vpc-cidr'}
+      Tags:
+        - Key: Name
+          Value: !Sub '${ProjectName}-${EnvironmentName}-rds-sg'
+
+#DB SubnetGroup Create
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupName: !Sub '${ProjectName}-${EnvironmentName}-subnet'
+      DBSubnetGroupDescription: !Sub '${ProjectName}-${EnvironmentName}-subnet'
+      SubnetIds:
+        - { 'Fn::ImportValue': !Sub '${ProjectName}-${EnvironmentName}-private-subnet-a'}
+        - { 'Fn::ImportValue': !Sub '${ProjectName}-${EnvironmentName}-private-subnet-c'}
+
+#MySQL DB ParameterGroup Create
+  MySQLDBParameterGroup:
+    Type: AWS::RDS::DBParameterGroup
+    Condition: RDSMySQL
+    Properties:
+      Family: !Sub 'MySQL${MySQLMajorVersion}'
+      Description: !Sub '${ProjectName}-${EnvironmentName}-mysql-parameter'
+
+#Oracle DB ParameterGroup Create
+  OracleDBParameterGroup:
+    Type: AWS::RDS::DBParameterGroup
+    Condition: RDSOracle
+    Properties:
+      Family: !Sub 'Oracle-ee-${OracleMajorVersion}'
+      Description: !Sub '${ProjectName}-${EnvironmentName}-oracle-parameter'
+
+#PostGres DB ParameterGroup Create
+  PostGresDBParameterGroup:
+    Type: AWS::RDS::DBParameterGroup
+    Condition: RDSPostGres
+    Properties:
+      Family: !Sub 'Postgres${PostGresMajorVersion}'
+      Description: !Sub '${ProjectName}-${EnvironmentName}-postgres-parameter'
+
+#MySQL DB Instance Create
+  MySQLDBInstance:
+    Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
+    Condition: RDSMySQL
+    Properties:
+      DBInstanceIdentifier: !Sub '${ProjectName}-${EnvironmentName}-rds-mysql'
+      Engine: MySQL
+      EngineVersion: !Sub '${MySQLMajorVersion}'
+      DBInstanceClass: !Ref RDSInstanceType
+      AllocatedStorage: !Ref RDSInstanceStorageSize
+      StorageType: !Ref RDSInstanceStorageType
+      MasterUsername: !Ref DBMasterUserName
+      MasterUserPassword: !Ref DBPassword
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      PubliclyAccessible: false
+      DBName: !Sub '${ProjectName}_${EnvironmentName}'
+      MultiAZ: !Ref MultiAZ
+      PreferredBackupWindow: '23:00-23:30'
+      PreferredMaintenanceWindow: 'sat:19:00-sat:19:30'
+      AutoMinorVersionUpgrade: false
+      DBParameterGroupName: !Ref MySQLDBParameterGroup
+      VPCSecurityGroups:
+        - !Ref RDSSG
+      CopyTagsToSnapshot: true
+      BackupRetentionPeriod: 7
+
+#Oracle DB Instance Create
+  OracleDBInstance:
+    Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
+    Condition: RDSOracle
+    Properties:
+      DBInstanceIdentifier: !Sub '${ProjectName}-${EnvironmentName}-rds-oracle'
+      Engine: Oracle-ee
+      EngineVersion: !Sub '${OracleMajorVersion}'
+      LicenseModel: !Ref LicenseModel
+      DBInstanceClass: !Ref RDSInstanceType
+      AllocatedStorage: !Ref RDSInstanceStorageSize
+      StorageType: !Ref RDSInstanceStorageType
+      MasterUsername: !Ref DBMasterUserName
+      MasterUserPassword: !Ref DBPassword
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      PubliclyAccessible: false
+      MultiAZ: !Ref MultiAZ
+      PreferredBackupWindow: '23:00-23:30'
+      PreferredMaintenanceWindow: 'sat:19:00-sat:19:30'
+      AutoMinorVersionUpgrade: false
+      DBParameterGroupName: !Ref OracleDBParameterGroup
+      VPCSecurityGroups:
+        - !Ref RDSSG
+      CopyTagsToSnapshot: true
+      BackupRetentionPeriod: 7
+
+#Postgres DB Instance Create
+  PostGresDBInstance:
+    Type: AWS::RDS::DBInstance
+    DeletionPolicy: Delete
+    Condition: RDSPostGres
+    Properties:
+      DBInstanceIdentifier: !Sub '${ProjectName}-${EnvironmentName}-rds-postgres'
+      Engine: PostGres
+      EngineVersion: !Sub '${PostGresMajorVersion}'
+      DBInstanceClass: !Ref RDSInstanceType
+      AllocatedStorage: !Ref RDSInstanceStorageSize
+      StorageType: !Ref RDSInstanceStorageType
+      MasterUsername: !Ref DBMasterUserName
+      MasterUserPassword: !Ref DBPassword
+      DBSubnetGroupname: !Ref DBSubnetGroup
+      PubliclyAccessible: false
+      MultiAZ: !Ref MultiAZ
+      PreferredBackupWindow: '23:00-23:30'
+      PreferredMaintenanceWindow: 'sat:19:00-sat:19:30'
+      AutoMinorVersionUpgrade: false
+      DBParameterGroupName: !Ref PostGresDBParameterGroup
+      VPCSecurityGroups:
+        - !Ref RDSSG
+      CopyTagsToSnapshot: true
+      BackupRetentionPeriod: 7
+
+Outputs:
+
+#MySQL DB Instance ID
+  MySQLDBInstanceID:
+    Condition: RDSMySQL
+    Value: !Ref MySQLDBInstance
+    Export:
+      Name: !Sub '${ProjectName}-${EnvironmentName}-rds-mysql-id'
+
+#MySQL DB Instance Endpoint
+  MySQLDBInstanceEndpoint:
+    Condition: RDSMySQL
+    Value: !GetAtt  MySQLDBInstance.Endpoint.Address
+    Export:
+      Name: !Sub '${ProjectName}-${EnvironmentName}-mysql-endpoint'
+
+#OracleL DB Instance ID
+  OracleDBInstanceID:
+    Condition: RDSOracle
+    Value: !Ref OracleDBInstance
+    Export:
+      Name: !Sub '${ProjectName}-${EnvironmentName}-rds-oracle-id'
+
+#Oracle DB Instance Endpoint
+  OracleDBInstanceEndpoint:
+    Condition: RDSOracle
+    Value: !GetAtt  OracleDBInstance.Endpoint.Address
+    Export:
+      Name: !Sub '${ProjectName}-${EnvironmentName}-oracle-endpoint'
+
+#Postgres DB Instance ID
+  PostGresDBInstanceID:
+    Condition: RDSPostGres
+    Value: !Ref PostGresDBInstance
+    Export:
+      Name: !Sub '${ProjectName}-${EnvironmentName}-rds-postgres-id'
+
+#Postgres DB Instance Endpoint
+  PostGresDBInstanceEndpoint:
+    Condition: RDSPostGres
+    Value: !GetAtt  PostGresDBInstance.Endpoint.Address
+    Export:
+      Name: !Sub '${ProjectName}-${EnvironmentName}-postgres-endpoint'

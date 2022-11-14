@@ -1,0 +1,131 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "LC and Auto Scaling Group Configuration",
+    "Parameters": {
+        "NetworkStackName": {
+            "Description": "Name of the Stack related with network configuration",
+            "Type": "String",
+            "MinLength": 1,
+            "MaxLength": 255,
+            "AllowedPattern": "^[a-zA-Z][-a-zA-Z0-9]*$",
+            "Default": "Network"
+        }
+    },
+    "Resources": {
+        "LaunchConfiguration": {
+            "Type": "AWS::AutoScaling::LaunchConfiguration",
+            "Properties": {
+                "AssociatePublicIpAddress": true,
+                "ImageId": "ami-00f045aed21a55240",
+                "InstanceMonitoring": false,
+                "InstanceType": "t2.nano",
+                "KeyName": "test-key",
+                "LaunchConfigurationName": "TestAS-Linux",
+                "SecurityGroups": [
+                    {
+                        "Fn::ImportValue": {
+                            "Fn::Sub": "${NetworkStackName}-sg"
+                        }
+                    }
+                ]
+            }
+        },
+        "LaunchConfiguration2": {
+            "Type": "AWS::AutoScaling::LaunchConfiguration",
+            "Properties": {
+                "AssociatePublicIpAddress": true,
+                "ImageId": "ami-0feef1943a971f00e",
+                "InstanceMonitoring": false,
+                "InstanceType": "t2.nano",
+                "KeyName": "test-key",
+                "LaunchConfigurationName": "TestAS-Widows",
+                "SecurityGroups": [
+                    {
+                        "Fn::ImportValue": {
+                            "Fn::Sub": "${NetworkStackName}-sg"
+                        }
+                    }
+                ]
+            }
+        },
+        "AutoScalingGroup": {
+            "Type": "AWS::AutoScaling::AutoScalingGroup",
+            "Properties": {
+                "AutoScalingGroupName": "TestAS99",
+                "DesiredCapacity": 1,
+                "LaunchConfigurationName": {
+                    "Ref": "LaunchConfiguration"
+                },
+                "MaxSize": 2,
+                "MinSize": 1,
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "PropagateAtLaunch": true,
+                        "Value": "Test-EC299"
+                    }
+                ],
+                "TerminationPolicies" : [ "NewestInstance" ],
+                "VPCZoneIdentifier": [
+                    {
+                        "Fn::ImportValue": {
+                            "Fn::Sub": "${NetworkStackName}-1c"
+                        }
+                    }
+                ]
+            }
+        },
+        "myScaleOutPolicy" : {
+           "Type" : "AWS::AutoScaling::ScalingPolicy",
+           "Properties" : {
+              "AdjustmentType" : "ChangeInCapacity",
+              "AutoScalingGroupName" : { "Ref" : "AutoScalingGroup" },
+              "ScalingAdjustment" : "1"
+           }
+        },
+        "CPUAlarmHigh" : {
+           "Type" : "AWS::CloudWatch::Alarm",
+           "Properties" : {
+              "EvaluationPeriods" : "1",
+              "Statistic" : "Average",
+              "Threshold" : "40",
+              "AlarmDescription" : "Alarm if CPU too high or metric disappears indicating instance is down",
+              "Period" : "60",
+              "AlarmActions" : [ { "Ref" : "myScaleOutPolicy" } ],
+              "Namespace" : "AWS/EC2",
+              "Dimensions" : [ {
+                 "Name" : "AutoScalingGroupName",
+                 "Value" : { "Ref" : "AutoScalingGroup" }
+              } ],
+              "ComparisonOperator" : "GreaterThanThreshold",
+              "MetricName" : "CPUUtilization"
+           }
+        },
+        "myScaleInPolicy" : {
+           "Type" : "AWS::AutoScaling::ScalingPolicy",
+           "Properties" : {
+              "AdjustmentType" : "ChangeInCapacity",
+              "AutoScalingGroupName" : { "Ref" : "AutoScalingGroup" },
+              "ScalingAdjustment" : "-1"
+           }
+        },
+        "CPUAlarmLow" : {
+           "Type" : "AWS::CloudWatch::Alarm",
+           "Properties" : {
+              "EvaluationPeriods" : "1",
+              "Statistic" : "Average",
+              "Threshold" : "40",
+              "AlarmDescription" : "Alarm if CPU too high or metric disappears indicating instance is down",
+              "Period" : "60",
+              "AlarmActions" : [ { "Ref" : "myScaleInPolicy" } ],
+              "Namespace" : "AWS/EC2",
+              "Dimensions" : [ {
+                 "Name" : "AutoScalingGroupName",
+                 "Value" : { "Ref" : "AutoScalingGroup" }
+              } ],
+              "ComparisonOperator" : "LessThanOrEqualToThreshold",
+              "MetricName" : "CPUUtilization"
+           }
+        }
+    }
+}

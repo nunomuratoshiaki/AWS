@@ -1,0 +1,7 @@
+- |-
+    #set($data = $util.escapeJavaScript($input.json('$')))
+    {
+      "input": "$data",
+      "stateMachineArn": "${StateMachineArn}"
+    }
+  - { StateMachineArn: !Ref StepFunction }

@@ -1,0 +1,47 @@
+{
+    "AWSTemplateFormatVersion":"2010-09-09",
+    "Description":"IAM Role",
+    "Parameters":{
+        "JumpAccountID":{
+            "ConstraintDescription":"AWS ID is Only Number with 12digit",
+            "MinLength":12,
+            "MaxLength":12,
+            "AllowedPattern":"[0-9]*",
+            "Description":"Please Enter Jump AWS Account ID!",
+            "Type":"String"
+        }
+    },
+    "Resources":{
+        "RootRole":{
+        "Type":"AWS::IAM::Role",
+        "Properties":{
+            "AssumeRolePolicyDocument":{
+                "Version":"2012-10-17",
+                "Statement":[
+                    {
+                        "Effect":"Allow",
+                        "Principal":{
+                            "AWS":[
+                                {
+                                    "Fn::Sub":"arn:aws:iam::${JumpAccountID}:user/tnunomura"
+                                }
+                            ]
+                        },
+                        "Action":[
+                            "sts:AssumeRole"
+                        ],
+                        "Condition":{
+                            "Bool":{
+                                "aws:MultiFactorAuthPresent":"true"
+                            }
+                        }
+                    }
+                ]
+            },
+            "ManagedPolicyArns":[
+                    "arn:aws:iam::aws:policy/administratorAccess"
+                ]
+            }
+        }
+    }
+}

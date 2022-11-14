@@ -1,0 +1,104 @@
+{
+    "rules": [
+        {
+            "rule-type": "transformation",
+            "rule-id": "1",
+            "rule-name": "1",
+            "rule-target": "schema",
+            "object-locator": {
+                "schema-name": "%"
+            },
+            "rule-action": "rename",
+            "value": "MISBASE",
+            "old-value": null
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "2",
+            "rule-name": "2",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES_DTL"
+            },
+            "rule-action": "include"
+        },
+        {
+            "rule-type": "table-settings",
+            "rule-id": "3",
+            "rule-name": "3",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES_DTL"
+            },
+            "parallel-load": {
+                "type": "subpartitions-auto"
+            }
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "4",
+            "rule-name": "4",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES"
+            },
+            "rule-action": "include"
+        },
+        {
+            "rule-type": "table-settings",
+            "rule-id": "5",
+            "rule-name": "5",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES"
+            },
+            "parallel-load": {
+                "type": "subpartitions-auto"
+            }
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "6",
+            "rule-name": "6",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES_CDNO_SRCH"
+            },
+            "rule-action": "include"
+        },
+        {
+            "rule-type": "table-settings",
+            "rule-id": "7",
+            "rule-name": "7",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES_CDNO_SRCH"
+            },
+            "parallel-load": {
+                "type": "subpartitions-auto"
+            }
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "8",
+            "rule-name": "8",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES_STR_SRCH"
+            },
+            "rule-action": "include"
+        },
+        {
+            "rule-type": "table-settings",
+            "rule-id": "9",
+            "rule-name": "9",
+            "object-locator": {
+                "schema-name": "MISBASE",
+                "table-name": "MS_ACMLT_SALES_STR_SRCH"
+            },
+            "parallel-load": {
+                "type": "subpartitions-auto"
+            }
+        }
+    ]
+}

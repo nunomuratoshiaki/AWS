@@ -1,0 +1,197 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: API Gateway Create
+
+Parameters:
+  LambdaApprovalFunction:
+    Type: String
+
+  RestAPI:
+    Type: String
+
+  ExecutionResource:
+    Type: String
+
+  StartStepFunctionResource:
+    Type: String
+
+  StepFunction:
+    Type: String
+
+Resources:
+
+#API Gateway GET Method Create
+  GETMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      Integration: 
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaApprovalFunction}/invocations'
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseTemplates:
+              application/json: |
+                #if(!$input.path('$.statusCode').isEmpty())
+                  #set($context.responseOverride.status = $input.path('$.statusCode'))
+                  $input.path('$.body')
+                #else
+                $input.json('$')
+                #end
+        RequestTemplates:
+          application/json: |
+            {
+              "body" : $input.json("$"),
+              "headers" : {
+                #foreach($header in $input.params().header.keySet())
+                "$header" : "$util.escapeJavaScript($input.params().header.get($header))" #if($foreach.hasNext),#end
+                
+                #end
+              },
+              "method" : "$context.httpMethod",
+              "params" : {
+                #foreach($param in $input.params().path.keySet())
+                "$param" : "$util.escapeJavaScript($input.params().path.get($param))" #if($foreach.hasNext),#end
+                
+                #end
+              },
+              "query" : {
+                #foreach($queryParam in $input.params().querystring.keySet())
+                "$queryParam" : "$util.escapeJavaScript($input.params().querystring.get($queryParam))" #if($foreach.hasNext),#end
+                
+                #end
+              }
+            }
+      ResourceId: !Ref ExecutionResource
+      RestApiId: !Ref RestAPI
+      MethodResponses:
+        - StatusCode: 200
+          ResponseModels:
+            application/json;charset=UTF-8: Empty
+
+#API Gateway POST Method Create
+  POSTMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      ApiKeyRequired: true
+      AuthorizationType: NONE
+      HttpMethod: POST
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:states:action/StartExecution'
+        Credentials: !GetAtt 'APIGatewayCloudWatchLogsRole.Arn'
+        IntegrationResponses:
+          - StatusCode: 200
+        RequestTemplates:
+          application/json: !Sub
+          - |-
+            #set($data = $util.escapeJavaScript($input.json('$')))
+            {
+              "input": "$data",
+              "stateMachineArn": "${StateMachineArn}"
+            }
+          - { StateMachineArn: !Ref StepFunction }
+      ResourceId: !Ref StartStepFunctionResource
+      RestApiId: !Ref RestAPI
+      MethodResponses:
+        - StatusCode: 200
+          ResponseModels:
+            application/json: Empty
+
+# API Gateway Account Create
+  Account:
+    Type: AWS::ApiGateway::Account
+    Properties:
+      CloudWatchRoleArn: !GetAtt 'APIGatewayCloudWatchLogsRole.Arn'
+
+#API Gateway Stage Create
+  Stage:
+    DependsOn:
+      - Account
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      DeploymentId: !Ref Deployment
+      MethodSettings:
+        - DataTraceEnabled: true
+          HttpMethod: '*'
+          LoggingLevel: INFO
+          ResourcePath: /*
+      RestApiId: !Ref RestAPI
+      StageName: states
+
+#API Gateway Deployment Create
+  Deployment:
+    DependsOn:
+      - GETMethod
+      - POSTMethod
+    Type: AWS::ApiGateway::Deployment
+    Properties:
+      RestApiId: !Ref RestAPI
+      StageName: DummyStage
+
+#API Dateway UsagePlan Create
+  UsagePlan:
+    Type: AWS::ApiGateway::UsagePlan
+    DependsOn:
+      - Stage
+    Properties:
+      ApiStages:
+        - ApiId: !Ref RestAPI
+          Stage: !Ref Stage
+      UsagePlanName: AccountCreation-Dev-UsagePlan
+
+#API Key Create
+  APIKey:
+    Type: AWS::ApiGateway::ApiKey
+    DependsOn:
+      - Stage
+    Properties:
+      CustomerId: GFom
+      Enabled: true
+      Name: AccountCreation-Dev-ApiKey
+      StageKeys:
+        - RestApiId: !Ref RestAPI
+          StageName: !Ref Stage
+
+#Link API Key and UsagePlan
+  APIUsagePlankey:
+    Type: AWS::ApiGateway::UsagePlanKey
+    DependsOn:
+      - APIKey
+      - UsagePlan
+    Properties:
+      KeyId: !Ref APIKey
+      KeyType: API_KEY
+      UsagePlanId: !Ref UsagePlan
+
+#IAM Role Create
+  APIGatewayCloudWatchLogsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - 'apigateway.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      Policies:
+        - PolicyName: APIGatewayLogsPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'logs:*'
+                Resource: !Sub 'arn:${AWS::Partition}:logs:*:*:*'
+
+Outputs:
+
+  APIGatewayInvokeURL:
+    Value: !Sub 'https://${RestAPI}.exeute-api.${AWS::Region}.amazonaws.com/states'
+    Export:
+      Name: APIGatewayInvokeURL

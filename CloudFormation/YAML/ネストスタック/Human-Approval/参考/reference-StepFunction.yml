@@ -1,0 +1,91 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Step Function Create
+
+Parameters:
+  Email:
+    Type: String
+    AllowedPattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+
+  LambdaHumanApprovalSendEmailFunction:
+    Type: String
+
+  RestAPI:
+    Type: String
+
+Resources:
+
+# Step Function Create
+  StepFunction:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      RoleArn: !GetAtt LambdaStateMachineExecutionRole.Arn
+      DefinitionString:
+        Fn::Sub: |
+          {
+            "StartAt": "Lambda Callback",
+            "TimeoutSeconds": 3600,
+            "States": {
+              "Lambda Callback": {
+                "Type": "Task",
+                "Resource": "arn:${AWS::Partition}:states:::lambda:invoke.waitForTaskToken",
+                "Parameters": {
+                  "FunctionName": "${LambdaHumanApprovalSendEmailFunction}",
+                  "Payload": {
+                    "ExecutionContext.$": "$$",
+                    "APIGatewayEndpoint": "https://${RestAPI}.execute-api.${AWS::Region}.amazonaws.com/states"
+                  }
+                },
+                "Next": "ManualApprovalChoiceState"
+              },
+              "ManualApprovalChoiceState": {
+                "Type": "Choice",
+                "Choices": [
+                  {
+                    "Variable": "$.Status",
+                    "StringEquals": "Approved! Task approved by ${Email}",
+                    "Next": "ApprovedPassState"
+                  },
+                  {
+                    "Variable": "$.Status",
+                    "StringEquals": "Rejected! Task rejected by ${Email}",
+                    "Next": "RejectedPassState"
+                  }
+                ]
+              },
+              "ApprovedPassState": {
+                "Type": "Pass",
+                "End": true
+              },
+              "RejectedPassState": {
+                "Type": "Pass",
+                "End": true
+              }
+            }
+          }
+
+#IAM Role Create
+  LambdaStateMachineExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: states.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: InvokeCallbackLambda
+          PolicyDocument:
+            Statement:
+             - Effect: Allow
+               Action:
+                - 'lambda:InvokeFunction'
+               Resource:
+                - !Sub '${LambdaHumanApprovalSendEmailFunction}'
+
+Outputs:
+  StateMachineHumanApproval:
+    Value: !Ref StepFunction
+    Export:
+      Name: StateMachineHumanApproval

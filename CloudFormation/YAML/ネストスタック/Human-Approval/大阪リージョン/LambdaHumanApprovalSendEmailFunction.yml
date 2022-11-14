@@ -1,0 +1,81 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+
+Parameters:
+  Areyougoingtodeploytotestingsite:
+    Type: String
+
+  awsExampleManagedPolicyParameter:
+    Type: String
+    Default: arn:aws:iam::aws:policy/AmazonSESFullAccess
+
+  supportmailaddress:
+    Type: String
+
+  approvermailaddress:
+    Type: String
+
+Conditions:
+  DEBUG: !Equals [!Ref Areyougoingtodeploytotestingsite, true]
+
+Resources:
+
+#Lambda Create  
+  LambdaHumanApprovalSendEmailFunctbPOXgamoTfIF:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.lambda_handler
+      Runtime: nodejs14.x
+      CodeUri: 's3://cfn-template-tnunomura/send/LambdaHumanApprovalSendEmailFunction.zip'
+      Description: ''
+      MemorySize: 128
+      Timeout: 25
+      Role: !GetAtt LambdaSendEmailExecutionRole.Arn
+      Environment:
+        Variables:
+          support_mail_address: !Sub '${supportmailaddress}'
+          approver_mail_address: !Sub '${approvermailaddress}'
+          DEBUG_MODE: !Sub '${Areyougoingtodeploytotestingsite}'
+          customer_manual_url: >-
+            https://ashisuto-ecam.s3.ap-northeast-1.amazonaws.com/AWS%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E9%96%8B%E8%A8%AD%E5%BE%8C%E3%81%AE%E3%81%94%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf
+          org_unit_id: ou-36rk-3jz3j3oj
+          spreadsheet_url: >-
+            https://docs.google.com/spreadsheets/d/1wMhuPQmBR1ES6yhxdqyhX6FH0z5UR1-ql5SwZ1O4o7k/edit#gid=1485126580
+          mailsubject_prefix: !If
+          - DEBUG
+          - '【AWS再販テスト】'
+          - '【AWS再販】'
+          org_root_id: r-36rk
+
+#IAM Role Create
+  LambdaSendEmailExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: 
+                - 'lambda.amazonaws.com'
+            Action: 
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - !Ref awsExampleManagedPolicyParameter
+      Policies:
+        - PolicyName: CloudWatchLogsPolicy
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource: !Sub 'arn:${AWS::Partition}:logs:*:*:*'
+
+Outputs:
+  LambdaSendEmail:
+    Value: !GetAtt LambdaHumanApprovalSendEmailFunctbPOXgamoTfIF.Arn
+    Export:
+      Name: LambdaHumanApprovalSendEmailFunctbPOXgamoTfIF

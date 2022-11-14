@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: SNS Create
+
+Parameters:
+  Email:
+    Type: String
+    AllowedPattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    ConstraintDescription: Must be a valid email address.
+
+Resources:
+
+#SNS Create
+  SNS:
+    Type: AWS::SNS::Topic
+    Properties:
+      Subscription:
+        -
+          Endpoint: !Sub '${Email}'
+          Protocol: email
+
+Outputs:
+  SNS:
+    Value: !Ref SNS
+    Export:
+      Name: SNS

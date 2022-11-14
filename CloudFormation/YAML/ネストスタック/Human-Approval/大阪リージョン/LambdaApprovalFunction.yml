@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Lambda function that callback to AWS Step Functions
+
+Parameters:
+  Areyougoingtodeploytotestingsite:
+    Type: String
+  
+  RestAPI:
+    Type: String
+
+Resources:
+  
+#Lambda Create
+  LambdaApprovalFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs14.x
+      CodeUri: 's3://cfn-template-tnunomura/approval/LambdaApprovalFunction.zip'
+      Description: Lambda function that callback to AWS Step Functions
+      MemorySize: 128
+      Timeout: 3
+      Role: !GetAtt LambdaAPIGatewayIAMRole.Arn
+      Environment:
+        Variables:
+          DEBUG_MODE: !Sub '${Areyougoingtodeploytotestingsite}'
+
+#Lambda Permission Create
+  LambdaAPIGatewayInvoke:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt 'LambdaApprovalFunction.Arn'
+      Principal: 'apigateway.amazonaws.com'
+      SourceArn: !Sub 'arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${RestAPI}/*'
+
+#IAM Role Create
+  LambdaAPIGatewayIAMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - 'apigateway.amazonaws.com'
+                - 'lambda.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      Policies:
+        - PolicyName: CloudWatchLogsPolicy
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'logs:*'
+                Resource: !Sub 'arn:${AWS::Partition}:logs:*:*:*'
+        - PolicyName: StepFunctionsPolicy
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'states:SendTaskFailure'
+                  - 'states:SendTaskSuccess'
+                  - 'States:StartExecution'
+                Resource: 
+                  - '*' 
+
+Outputs:
+  LambdaApproval:
+    Value: !GetAtt LambdaApprovalFunction.Arn
+    Export:
+      Name: LambdaApprovalFunction

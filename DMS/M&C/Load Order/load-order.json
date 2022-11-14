@@ -1,0 +1,116 @@
+{
+    "rules":[
+        {
+            "rule-type": "transformation",
+            "rule-id": "587822801",
+            "rule-name": "587822801",
+            "rule-target": "schema",
+            "object-locator": {
+                "schema-name": "%"
+            },
+            "rule-action": "rename",
+            "value": "TEST2",
+            "old-value": null
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"587822802",
+            "rule-name":"587822802",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE1"
+            },
+            "rule-action":"include",
+            "load-order":5
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"587822803",
+            "rule-name":"587822803",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE2"
+            },
+            "rule-action":"include",
+            "load-order":1
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"587822804",
+            "rule-name":"587822804",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE3"
+            },
+            "rule-action":"include",
+            "load-order":4
+        },
+        {
+            "rule-type":"table-settings",
+            "rule-id":"587822805",
+            "rule-name":"587822805",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE3"
+            },
+            "parallel-load":{
+                "type":"partitions-list",
+                "partitions":[
+                    "A_FEB"
+                ]
+            }
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"587822806",
+            "rule-name":"587822806",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE4"
+            },
+            "rule-action":"include",
+            "load-order":2
+        },
+        {
+            "rule-type":"table-settings",
+            "rule-id":"587822807",
+            "rule-name":"587822807",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE4"
+            },
+            "parallel-load":{
+                "type":"partitions-list",
+                "partitions":[
+                    "B_FEB"
+                ]
+            }
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"587822808",
+            "rule-name":"587822808",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE5"
+            },
+            "rule-action":"include",
+            "load-order":3
+        },
+        {
+            "rule-type":"table-settings",
+            "rule-id":"587822809",
+            "rule-name":"587822809",
+            "object-locator":{
+                "schema-name":"TEST2",
+                "table-name":"TABLE5"
+            },
+            "parallel-load":{
+                "type":"partitions-list",
+                "partitions":[
+                    "C_FEB"
+                ]
+            }
+        }
+    ]
+}

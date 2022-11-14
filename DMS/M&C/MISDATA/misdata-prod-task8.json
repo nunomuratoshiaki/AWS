@@ -1,0 +1,41 @@
+{
+    "rules":[
+        {
+            "rule-type": "transformation",
+            "rule-id": "1",
+            "rule-name": "1",
+            "rule-target": "schema",
+            "object-locator": {
+                "schema-name": "%"
+            },
+            "rule-action": "rename",
+            "value": "MISDATA",
+            "old-value": null
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"2",
+            "rule-name":"2",
+            "object-locator":{
+                "schema-name":"MISDATA",
+                "table-name":"DMS_WSS_STR_ACTRST_REAL_KEY"
+            },
+            "rule-action":"include"
+        },
+        {
+            "rule-type":"table-settings",
+            "rule-id":"3",
+            "rule-name":"3",
+            "object-locator":{
+                "schema-name":"MISDATA",
+                "table-name":"DMS_WSS_STR_ACTRST_REAL_KEY"
+            },
+            "parallel-load":{
+                "type":"partitions-list",
+                "partitions":[
+                    "PT_DMS_WSS_ST_ACT_RL_KY_202203"
+                ]
+            }
+        }
+    ]
+}

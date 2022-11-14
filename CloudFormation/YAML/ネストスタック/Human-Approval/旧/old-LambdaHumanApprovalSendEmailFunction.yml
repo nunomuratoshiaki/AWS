@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  AccountCreation2LambdaHumanApprovalSendEmailFunctbPOXgamoTfIF:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.lambda_handler
+      Runtime: nodejs14.x
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 25
+      Role: >-
+        arn:aws:iam::772008686221:role/AccountCreation2-LambdaSendEmailExecutionRole-ZV33WJ5BB8T3
+      Environment:
+        Variables:
+          support_mail_address_org: aws_tec@ashisuto.co.jp
+          approver_mail_address: jsuzuki@ashisuto.biz.ezweb.ne.jp
+          approver_mail_address_org: awssp_ship@ashisuto.co.jp
+          DEBUG_MODE: 'true'
+          customer_manual_url: >-
+            https://ashisuto-ecam.s3.ap-northeast-1.amazonaws.com/AWS%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E9%96%8B%E8%A8%AD%E5%BE%8C%E3%81%AE%E3%81%94%E5%AF%BE%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf
+          org_unit_id: ou-36rk-3jz3j3oj
+          spreadsheet_url: >-
+            https://docs.google.com/spreadsheets/d/1wMhuPQmBR1ES6yhxdqyhX6FH0z5UR1-ql5SwZ1O4o7k/edit#gid=1485126580
+          mailsubject_prefix: 【AWS再販テスト】
+          support_mail_address: jsuzuki@ashisuto.biz.ezweb.ne.jp
+          org_root_id: r-36rk

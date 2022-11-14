@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  LambdaAccountCreationFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: python3.8
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 30
+      Role: 'arn:aws:iam::772008686221:role/AccountCreation-Dev-LambdaRole'
+      Environment:
+        Variables:
+          approver_mail_address: awssp_ship@ashisuto.co.jp
+          customer_manual_url: >-
+            https://ashisuto-aws-manual.s3.ap-northeast-1.amazonaws.com/aws_account_guide.pdf
+          org_root_id: r-36rk
+          org_unit_id: ou-36rk-3jz3j3oj
+          spreadsheet_url: >-
+            https://docs.google.com/spreadsheets/d/1wMhuPQmBR1ES6yhxdqyhX6FH0z5UR1-ql5SwZ1O4o7k/edit#gid=1485126580
+          support_mail_address: aws_tec@ashisuto.co.jp

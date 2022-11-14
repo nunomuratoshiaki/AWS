@@ -1,0 +1,26 @@
+{
+    "rules":[
+        {
+            "rule-type": "transformation",
+            "rule-id": "1",
+            "rule-name": "1",
+            "rule-target": "schema",
+            "object-locator": {
+                "schema-name": "%"
+            },
+            "rule-action": "rename",
+            "value": "MISCOPY",
+            "old-value": null
+        },
+        {
+            "rule-type":"selection",
+            "rule-id":"2",
+            "rule-name":"2",
+            "object-locator":{
+                "schema-name":"MISCOPY",
+                "table-name":"%"
+            },
+            "rule-action":"include"
+        }
+    ]
+}

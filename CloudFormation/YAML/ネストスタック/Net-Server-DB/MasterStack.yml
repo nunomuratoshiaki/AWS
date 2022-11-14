@@ -1,0 +1,140 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Master stack
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: Project and Environment Name
+        Parameters:
+          - ProjectName
+          - EnvironmentName
+        
+      - Label:
+          default: VPC Configration
+        Parameters:
+          - VPCTemplateURL
+
+      - Label:
+          default: EC2 Configration
+        Parameters:
+          - EC2Type
+          - EC2TemplateURL
+
+      - Label:
+          default: RDS Configration
+        Parameters:
+          - RDSType
+          - RDSTemlpateURl
+
+    ParameterLabels:
+      ProjectName:
+        default: ProjectName
+
+      EnvironmentName:
+        default: EnvironmentName
+
+      VPCTemplateURL:
+        default: VPCTemplateURL
+
+      EC2Type:
+        default: EC2Type
+
+      EC2TemplateURL:
+        default: EC2TemplateURL
+
+      RDSType:
+        default: RDSType
+
+      RDSTemlpateURl:
+        default: RDSTemlpateURl
+
+Parameters:
+  
+  ProjectName:
+    Type: String
+  
+  EnvironmentName:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - stag
+      - prod
+
+  EC2Type:
+    Type: String
+    Default: Linux2
+    AllowedValues:
+      - Linux2
+      - Windows
+
+  RDSType:
+    Type: String
+    Default: MySQL
+    AllowedValues:
+      - MySQL
+      - Oracle
+      - Postgres
+
+  VPCTemplateURL:
+    Type: String
+    Default: https://cf-templates-1vlqpgqefudg9-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/CFn-Template/Net-Server-DB/VPC.yml
+
+  EC2TemplateURL:
+    Type: String
+    Default: https://cf-templates-1vlqpgqefudg9-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/CFn-Template/Net-Server-DB/EC2.yml
+  
+  RDSTemlpateURl:
+    Type: String
+    Default: https://cf-templates-1vlqpgqefudg9-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/CFn-Template/Net-Server-DB/RDSforMySQL.yml
+    
+Resources:
+
+#Network Create
+  Network:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Ref VPCTemplateURL
+      Parameters:
+        ProjectName: !Sub '${ProjectName}'
+        EnvironmentName: !Sub '${EnvironmentName}'
+      Tags:
+        - Key: Pjt
+          Value: !Sub '${ProjectName}'
+        - Key: Env
+          Value: !Sub '${EnvironmentName}'
+
+#Server Create
+  Server:
+    Type: AWS::CloudFormation::Stack
+    DependsOn:
+      - "Network"
+    Properties:
+      TemplateURL: !Ref EC2TemplateURL
+      Parameters:
+        ProjectName: !Sub '${ProjectName}'
+        EnvironmentName: !Sub '${EnvironmentName}'
+        EC2Type: !Ref EC2Type
+      Tags:
+        - Key: Pjt
+          Value: !Sub '${ProjectName}'
+        - Key: Env
+          Value: !Sub '${EnvironmentName}'
+
+#Database Create
+  Database:
+    Type: AWS::CloudFormation::Stack
+    DependsOn:
+      - "Server"    
+    Properties:
+      TemplateURL: !Ref RDSTemlpateURl
+      Parameters:
+          ProjectName: !Sub '${ProjectName}'
+          EnvironmentName: !Sub '${EnvironmentName}'
+          RDSType: !Ref RDSType
+      Tags:
+        - Key: Pjt
+          Value: !Sub '${ProjectName}'
+        - Key: Env
+          Value: !Sub '${EnvironmentName}'

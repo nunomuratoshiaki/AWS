@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Rest API and Resource Create
+
+Resources:
+
+#Rest API Create
+  RestAPI:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: 'Human approval endpoint'
+      Description: 'HTTP Endpoint backed by API Gateway and Lambda'
+      FailOnWarnings: true
+
+  #API Gateway Execution Resource Create
+  ExecutionResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref RestAPI
+      ParentId:  !GetAtt 'RestAPI.RootResourceId'
+      PathPart: execution
+
+#API Gateway Start StepFunction Resource Create
+  StartStepFunctionResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref RestAPI
+      ParentId: !GetAtt 'RestAPI.RootResourceId'
+      PathPart: startStepFunction
+
+Outputs:
+  RestAPI:
+    Value: !Ref RestAPI
+    Export:
+      Name: RestAPI
+
+  ExecutionResource:
+    Value: !Ref ExecutionResource
+    Export:
+      Name: ExecutionResource
+
+  StartStepFunctionResource:
+    Value: !Ref StartStepFunctionResource
+    Export:
+      Name: StartStepFunctionResource
