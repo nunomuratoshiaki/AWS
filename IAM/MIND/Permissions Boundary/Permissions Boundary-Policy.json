@@ -1,0 +1,218 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AmazonEventBridgeCondition",
+            "Effect": "Allow",
+            "Action": "events:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonElasticComputeCloudCondition",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "ec2:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AWSElasticBeanstalkCondition",
+            "Effect": "Allow",
+            "Action": "elasticbeanstalk:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AWSCloudFormationCondition",
+            "Effect": "Allow",
+            "Action": "cloudformation:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid":"AmazonEC2AutoScalingCondition",
+            "Effect":"Allow",
+            "Action":"autoscaling:*",
+            "Resource":"*",
+            "Condition":{
+                "StringEqualsIfExists":{
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "autoscaling:ResourceTag/MINDSysName":"testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AWSBackupCondition",
+            "Effect": "Allow",
+            "Action": "backup:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonSimpleStorageServiceCondition",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "s3:RequestObjectTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AWSKeyManagementServiceCondition",
+            "Effect": "Allow",
+            "Action": "kms:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonElasticBlockStoreCondition",
+            "Effect": "Allow",
+            "Action": "ebs:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AWSCertificateManagerCondition",
+            "Effect": "Allow",
+            "Action": "acm:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AWSIAMCondition",
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "iam:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonRelationalDatabaseServiceCondition",
+            "Effect": "Allow",
+            "Action": "rds:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "rds:Req-Tag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "ElasticLoadBalancingCondition",
+            "Effect": "Allow",
+            "Action": "elasticloadbalancing:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "elasticloadbalancing:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonCloudWatchCondition",
+            "Effect": "Allow",
+            "Action": "cloudwatch:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj",
+                    "cloudwatch:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid":"AmazonCloudWatchLogsCondition",
+            "Effect":"Allow",
+            "Action":"logs:*",
+            "Resource":"*",
+            "Condition":{
+                "StringEqualsIfExists":{
+                    "aws:RequestTag/MINDSysName":"testprj",
+                    "aws:ResourceTag/MINDSysName":"testprj"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonCloudFrontCondition",
+            "Effect": "Allow",
+            "Action": "cloudfront:*",
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "aws:RequestTag/MINDSysName": "testprj",
+                    "aws:ResourceTag/MINDSysName": "testprj"
+                }
+            }
+        },
+        {
+            "Sid":"AWSWAFCondition",
+            "Effect":"Allow",
+            "Action":[
+                "waf:*",
+                "wafv2:*"
+            ],
+            "Resource":"*",
+            "Condition":{
+                "StringEqualsIfExists":{
+                    "aws:RequestTag/MINDSysName":"testprj",
+                    "aws:ResourceTag/MINDSysName":"testprj"
+                }
+            }
+        }
+    ]
+}

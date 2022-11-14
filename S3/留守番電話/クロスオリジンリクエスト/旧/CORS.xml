@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<CORSRule>
+    <AllowedOrigin>http://n-toshiaki-connect.s3-website-reagionap-northeast-1.amazonaws.com</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <MaxAgeSeconds>3000</MaxAgeSeconds>
+    <AllowedHeader>Authorization</AllowedHeader>
+    <AllowedHeader>X-Amz-Content-Sha256</AllowedHeader>
+    <AllowedHeader>X-Amz-Date</AllowedHeader>
+    <AllowedHeader>x-amz-security-token</AllowedHeader>
+    <AllowedHeader>X-Amz-User-Agent</AllowedHeader>
+</CORSRule>
+</CORSConfiguration>

@@ -1,0 +1,17 @@
+{
+  "source": [
+    "aws.ec2"
+  ],
+  "detail-type": [
+    "EBS Multi-Volume Snapshots Completion Status"
+  ],
+  "detail": {
+    "event": [
+      "createSnapshots"
+    ],
+    "result": [
+      "succeeded",
+      "failed"
+    ]
+  }
+}

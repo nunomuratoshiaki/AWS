@@ -1,0 +1,33 @@
+{
+  "version": "0",
+  "id": "01234567-0123-0123-0123-012345678901",
+  "detail-type": "EBS Multi-Volume Snapshots Completion Status",
+  "source": "aws.ec2",
+  "account": "012345678901",
+  "time": "yyyy-mm-ddThh:mm:ssZ",
+  "region": "us-east-1",
+  "resources": [
+    "arn:aws:ec2::us-east-1:snapshot/snap-01234567",
+    "arn:aws:ec2::us-east-1:snapshot/snap-012345678"
+  ],
+  "detail": {
+    "event": "createSnapshots",
+    "result": "succeeded",
+    "cause": "",
+    "request-id": "",
+    "startTime": "yyyy-mm-ddThh:mm:ssZ",
+    "endTime": "yyyy-mm-ddThh:mm:ssZ",
+    "snapshots": [
+      {
+        "snapshot_id": "arn:aws:ec2::us-east-1:snapshot/snap-01234567",
+        "source": "arn:aws:ec2::us-east-1:volume/vol-01234567",
+        "status": "completed"
+      },
+      {
+        "snapshot_id": "arn:aws:ec2::us-east-1:snapshot/snap-012345678",
+        "source": "arn:aws:ec2::us-east-1:volume/vol-012345678",
+        "status": "completed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "metrics": {
+        "metrics_collected": {
+            "procstat": [
+                {
+                    "exe": "sshd",
+                    "measurement": [
+                        "pid_count"
+                    ]
+                },
+                {
+                    "exe": "httpd",
+                    "measurement": [
+                        "pid_count"
+                    ]
+                }
+            ]
+        }
+    }
+}
