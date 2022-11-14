@@ -1,0 +1,8316 @@
+{
+	"rules": [
+		{
+			"rule-type": "transformation",
+			"rule-id": "1",
+			"rule-name": "1",
+			"rule-target": "schema",
+			"object-locator": {
+				"schema-name": "%"
+			},
+			"rule-action": "rename",
+			"value": "MISDATA",
+			"old-value": null
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "2",
+			"rule-name": "2",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "%"
+			},
+			"rule-action": "include"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "3",
+			"rule-name": "3",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "4",
+			"rule-name": "4",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_10"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "5",
+			"rule-name": "5",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "6",
+			"rule-name": "6",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_3"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "7",
+			"rule-name": "7",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_4"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "8",
+			"rule-name": "8",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_5"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "9",
+			"rule-name": "9",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_6"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "10",
+			"rule-name": "10",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_7"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "11",
+			"rule-name": "11",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_8"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "12",
+			"rule-name": "12",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ATTR_9"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "13",
+			"rule-name": "13",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_AUTO_SUPPLY_FLAG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "14",
+			"rule-name": "14",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_AUTO_SUPPLY_WAY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "15",
+			"rule-name": "15",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_MDL_DPLY_FR_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "16",
+			"rule-name": "16",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_MDL_DPLY_FR_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "17",
+			"rule-name": "17",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_MDL_DPLY_TO_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "18",
+			"rule-name": "18",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_MDL_DPLY_TO_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "19",
+			"rule-name": "19",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_SKU_DPLY_FR_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "20",
+			"rule-name": "20",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_SKU_DPLY_FR_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "21",
+			"rule-name": "21",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_SKU_DPLY_TO_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "22",
+			"rule-name": "22",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_BLCK_SKU_DPLY_TO_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "23",
+			"rule-name": "23",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CARD_SRV_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "24",
+			"rule-name": "24",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CASSETTE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "25",
+			"rule-name": "25",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CASSETTE_GROUP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "26",
+			"rule-name": "26",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CASSETTE_MODEL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "27",
+			"rule-name": "27",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CLOTH_FLAG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "28",
+			"rule-name": "28",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_COLOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "29",
+			"rule-name": "29",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CRDT_SL_RMNDR_AMOUNT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "30",
+			"rule-name": "30",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CRRY_STCK_TRNSFR_DT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "31",
+			"rule-name": "31",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_CS_TRNSFR_FLG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "32",
+			"rule-name": "32",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "33",
+			"rule-name": "33",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_10"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "34",
+			"rule-name": "34",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "35",
+			"rule-name": "35",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_3"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "36",
+			"rule-name": "36",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_4"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "37",
+			"rule-name": "37",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_5"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "38",
+			"rule-name": "38",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_6"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "39",
+			"rule-name": "39",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_7"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "40",
+			"rule-name": "40",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_8"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "41",
+			"rule-name": "41",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DETAIL_ATTR_9"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "42",
+			"rule-name": "42",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DIS_DAY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "43",
+			"rule-name": "43",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_DWELLING"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "44",
+			"rule-name": "44",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_FCT_MODEL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "45",
+			"rule-name": "45",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_FCT_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "46",
+			"rule-name": "46",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_GDSSPPLY_RQFRWRD_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "47",
+			"rule-name": "47",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_GENERATION"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "48",
+			"rule-name": "48",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_GOODS_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "49",
+			"rule-name": "49",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_INTGRTN_STORE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "50",
+			"rule-name": "50",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_INTGRTN_STORE_STORE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "51",
+			"rule-name": "51",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_JAN_CODE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "52",
+			"rule-name": "52",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_JAN_CODE_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "53",
+			"rule-name": "53",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MARKDOWN_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "54",
+			"rule-name": "54",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_ML_ORDR_ADPTN_FLG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "55",
+			"rule-name": "55",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MODEL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "56",
+			"rule-name": "56",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MODEL_DEPLOY_FR_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "57",
+			"rule-name": "57",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MODEL_DEPLOY_FR_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "58",
+			"rule-name": "58",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MODEL_DEPLOY_TO_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "59",
+			"rule-name": "59",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MODEL_DEPLOY_TO_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "60",
+			"rule-name": "60",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_MODEL_R_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "61",
+			"rule-name": "61",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_NBPB_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "62",
+			"rule-name": "62",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_OCCUPATIONAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "63",
+			"rule-name": "63",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_PAYMENT_AMNT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "64",
+			"rule-name": "64",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_PAYMENT_TIMES"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "65",
+			"rule-name": "65",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_PB_CLASS_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "66",
+			"rule-name": "66",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_PURCHASE_AMNT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "67",
+			"rule-name": "67",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_PURCHASE_HISTORY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "68",
+			"rule-name": "68",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_REG_COST_RATE_USE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "69",
+			"rule-name": "69",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SEX"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "70",
+			"rule-name": "70",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SIZE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "71",
+			"rule-name": "71",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "72",
+			"rule-name": "72",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_COLOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "73",
+			"rule-name": "73",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_DEPLOY_FR_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "74",
+			"rule-name": "74",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_DEPLOY_FR_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "75",
+			"rule-name": "75",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_DEPLOY_TO_DATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "76",
+			"rule-name": "76",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_DEPLOY_TO_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "77",
+			"rule-name": "77",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_PRVD_1ST_DPLY_DT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "78",
+			"rule-name": "78",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_SKU_SIZE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "79",
+			"rule-name": "79",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_STRATEGY_GOODS_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "80",
+			"rule-name": "80",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_STR_SPPRT_SECT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "81",
+			"rule-name": "81",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_STR_SPPRT_SECT_STR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "82",
+			"rule-name": "82",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_TAG_PRCHS_FORM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "83",
+			"rule-name": "83",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_THROUGH_FLAG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "84",
+			"rule-name": "84",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_TIME_ZONE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "85",
+			"rule-name": "85",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_WS_STTSTCS_INF1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "86",
+			"rule-name": "86",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMS_WS_STTSTCS_INF2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "87",
+			"rule-name": "87",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_DISST_HSSBS_EV_PL_FL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "88",
+			"rule-name": "88",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_DISST_HSSBS_PLCE_FLOR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "89",
+			"rule-name": "89",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_DISST_PRCHS_PRTTN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "90",
+			"rule-name": "90",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_DISST_PURCHASE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "91",
+			"rule-name": "91",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_PRCHS_IDX_AGE_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "92",
+			"rule-name": "92",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_PRCHS_IDX_AGE_STORE_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "93",
+			"rule-name": "93",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SKU_PRCHS_STERM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "94",
+			"rule-name": "94",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SKU_SLS_ACTRST_STERM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "95",
+			"rule-name": "95",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SLS_FLOOR_CLSS_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "96",
+			"rule-name": "96",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SL_RDC_BRAND_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "97",
+			"rule-name": "97",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SL_RDC_BRAND_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "98",
+			"rule-name": "98",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SL_RDC_STCK_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "99",
+			"rule-name": "99",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_SL_RDC_STCK_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "100",
+			"rule-name": "100",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_STCK_SKU_STERM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "101",
+			"rule-name": "101",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_PURCHASE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "102",
+			"rule-name": "102",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_PURCHASE_PARTITION"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "103",
+			"rule-name": "103",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_SKU_BI_PSQ_DEMO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "104",
+			"rule-name": "104",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_SKU_BI_PSQ_DEMO_100"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "105",
+			"rule-name": "105",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_SKU_BLBI_PSQ_DEMO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "106",
+			"rule-name": "106",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_SKU_BL_PSQ_DEMO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "107",
+			"rule-name": "107",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "DMT_ST_SKU_STBI_PSQ_DEMO_100"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "108",
+			"rule-name": "108",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "FCT_ACMLT_FADV_SKU_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "109",
+			"rule-name": "109",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "FCT_ACMLT_PRCHS_SKU_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "110",
+			"rule-name": "110",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "FCT_ACMLT_SLS_SKU_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "111",
+			"rule-name": "111",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_PRCHS_BK_DPBLBI_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "112",
+			"rule-name": "112",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_PRCHS_BK_DPBLBI_SK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "113",
+			"rule-name": "113",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_PRCHS_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "114",
+			"rule-name": "114",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_PRCHS_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "115",
+			"rule-name": "115",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_PRCHS_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "116",
+			"rule-name": "116",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_SLS_BK_DPBLBI_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "117",
+			"rule-name": "117",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_SLS_BK_DPBLBI_SK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "118",
+			"rule-name": "118",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_SLS_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "119",
+			"rule-name": "119",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_SLS_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "120",
+			"rule-name": "120",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ACMLT_SLS_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "121",
+			"rule-name": "121",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_ADDR_MOUNT_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "122",
+			"rule-name": "122",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_CATALG_SNTRF_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "123",
+			"rule-name": "123",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_DATA_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "124",
+			"rule-name": "124",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_ENCLS_CMPNY_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "125",
+			"rule-name": "125",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_ENLSE_PATRN_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "126",
+			"rule-name": "126",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_FISCAL_YEAR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "127",
+			"rule-name": "127",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_MEDIA_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "128",
+			"rule-name": "128",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "129",
+			"rule-name": "129",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_OTHER_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "130",
+			"rule-name": "130",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_PRIORITY_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "131",
+			"rule-name": "131",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_AIM_PROCESS_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "132",
+			"rule-name": "132",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ALL_FADV_STBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "133",
+			"rule-name": "133",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ALL_FADV_STBL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "134",
+			"rule-name": "134",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ALL_SLS_ACTRST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "135",
+			"rule-name": "135",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ALL_SLS_STBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "136",
+			"rule-name": "136",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ALL_SLS_STBL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "137",
+			"rule-name": "137",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_BLCK_BLCK_GDS_ATTR_TEXT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "138",
+			"rule-name": "138",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_CASSETTE_MODEL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "139",
+			"rule-name": "139",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DISST_PZ_M_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "140",
+			"rule-name": "140",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DISST_PZ_W_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "141",
+			"rule-name": "141",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DISS_ACGPRD_STCK_CLSS_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "142",
+			"rule-name": "142",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DISS_ACGPRD_STCK_CLSS_MG2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "143",
+			"rule-name": "143",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DIS_BDGT_YR_HF_QR_MH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "144",
+			"rule-name": "144",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DIS_BDGT_YR_HF_QR_MH_BK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "145",
+			"rule-name": "145",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DIS_BLCK_BDGT_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "146",
+			"rule-name": "146",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DIS_WEEK_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "147",
+			"rule-name": "147",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ALLSTR_GRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "148",
+			"rule-name": "148",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ALLSTR_GRP_STR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "149",
+			"rule-name": "149",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ASSISTANT_MANAGER_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "150",
+			"rule-name": "150",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ASSISTANT_MANAGER_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "151",
+			"rule-name": "151",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ASSISTANT_MANAGER_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "152",
+			"rule-name": "152",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ASSISTANT_MNGR_BEM_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "153",
+			"rule-name": "153",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ASSISTANT_MNGR_BEM_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "154",
+			"rule-name": "154",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ASSISTANT_MNGR_BEM_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "155",
+			"rule-name": "155",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ATTR_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "156",
+			"rule-name": "156",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_999ST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "157",
+			"rule-name": "157",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "158",
+			"rule-name": "158",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "159",
+			"rule-name": "159",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR10"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "160",
+			"rule-name": "160",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR11"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "161",
+			"rule-name": "161",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR12"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "162",
+			"rule-name": "162",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR13"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "163",
+			"rule-name": "163",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR14"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "164",
+			"rule-name": "164",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR15"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "165",
+			"rule-name": "165",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR16"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "166",
+			"rule-name": "166",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR17"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "167",
+			"rule-name": "167",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR18"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "168",
+			"rule-name": "168",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR19"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "169",
+			"rule-name": "169",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "170",
+			"rule-name": "170",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR20"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "171",
+			"rule-name": "171",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR3"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "172",
+			"rule-name": "172",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR4"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "173",
+			"rule-name": "173",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR5"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "174",
+			"rule-name": "174",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR6"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "175",
+			"rule-name": "175",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR7"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "176",
+			"rule-name": "176",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR8"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "177",
+			"rule-name": "177",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_GDS_ATTR9"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "178",
+			"rule-name": "178",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "179",
+			"rule-name": "179",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_MODEL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "180",
+			"rule-name": "180",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "181",
+			"rule-name": "181",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_PTERN_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "182",
+			"rule-name": "182",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "183",
+			"rule-name": "183",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLCK_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "184",
+			"rule-name": "184",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLKATR_IND_SL_AREA"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "185",
+			"rule-name": "185",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BLOCK_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "186",
+			"rule-name": "186",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BL_BB_BM_BI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "187",
+			"rule-name": "187",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BRAND_HISTORY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "188",
+			"rule-name": "188",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUYER_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "189",
+			"rule-name": "189",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUYER_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "190",
+			"rule-name": "190",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUYER_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "191",
+			"rule-name": "191",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUYER_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "192",
+			"rule-name": "192",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUY_MONTH_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "193",
+			"rule-name": "193",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUY_MONTH_HIST_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "194",
+			"rule-name": "194",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_BUY_MONTH_HIST_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "195",
+			"rule-name": "195",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_CNTRCT_FRM_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "196",
+			"rule-name": "196",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_CORPORATE_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "197",
+			"rule-name": "197",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_CORPORATE_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "198",
+			"rule-name": "198",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_CORPORATE_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "199",
+			"rule-name": "199",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_CORPORATE_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "200",
+			"rule-name": "200",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_CRITERION_STOCK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "201",
+			"rule-name": "201",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "202",
+			"rule-name": "202",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "203",
+			"rule-name": "203",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "204",
+			"rule-name": "204",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_10"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "205",
+			"rule-name": "205",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "206",
+			"rule-name": "206",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_3"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "207",
+			"rule-name": "207",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_4"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "208",
+			"rule-name": "208",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_5"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "209",
+			"rule-name": "209",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_6"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "210",
+			"rule-name": "210",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_7"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "211",
+			"rule-name": "211",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_8"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "212",
+			"rule-name": "212",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_9"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "213",
+			"rule-name": "213",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_ATTR_TEXT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "214",
+			"rule-name": "214",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_BGRP_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "215",
+			"rule-name": "215",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_LGRP_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "216",
+			"rule-name": "216",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_GDS_MGRP_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "217",
+			"rule-name": "217",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_HISTORY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "218",
+			"rule-name": "218",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_LG_BG_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "219",
+			"rule-name": "219",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DEPT_MONTH_HISTORY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "220",
+			"rule-name": "220",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DETAIL_ATTR_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "221",
+			"rule-name": "221",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DISEBY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "222",
+			"rule-name": "222",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DISEBYSG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "223",
+			"rule-name": "223",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DISS_WK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "224",
+			"rule-name": "224",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DITEM_DITEM_GDS_ATTR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "225",
+			"rule-name": "225",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DITEM_GDS_ATTR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "226",
+			"rule-name": "226",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DITEM_GDS_ATTRNO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "227",
+			"rule-name": "227",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIVISION_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "228",
+			"rule-name": "228",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIVISION_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "229",
+			"rule-name": "229",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIVISION_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "230",
+			"rule-name": "230",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIVISION_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "231",
+			"rule-name": "231",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIV_MONTH_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "232",
+			"rule-name": "232",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIV_MONTH_HIST_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "233",
+			"rule-name": "233",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DIV_MONTH_HIST_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "234",
+			"rule-name": "234",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "235",
+			"rule-name": "235",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR10"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "236",
+			"rule-name": "236",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR11"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "237",
+			"rule-name": "237",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR12"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "238",
+			"rule-name": "238",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR13"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "239",
+			"rule-name": "239",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR14"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "240",
+			"rule-name": "240",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR15"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "241",
+			"rule-name": "241",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR16"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "242",
+			"rule-name": "242",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR17"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "243",
+			"rule-name": "243",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR18"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "244",
+			"rule-name": "244",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR19"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "245",
+			"rule-name": "245",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "246",
+			"rule-name": "246",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR20"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "247",
+			"rule-name": "247",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR3"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "248",
+			"rule-name": "248",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR4"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "249",
+			"rule-name": "249",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR5"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "250",
+			"rule-name": "250",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR6"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "251",
+			"rule-name": "251",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR7"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "252",
+			"rule-name": "252",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR8"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "253",
+			"rule-name": "253",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPTBRD_GDS_ATTR9"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "254",
+			"rule-name": "254",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DPT_ATTR_ORGZTN_LG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "255",
+			"rule-name": "255",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_DSCNT_PLAN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "256",
+			"rule-name": "256",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_FLOOR_MANAGER_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "257",
+			"rule-name": "257",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_FLOOR_MANAGER_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "258",
+			"rule-name": "258",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_FLOOR_MANAGER_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "259",
+			"rule-name": "259",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_FLOOR_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "260",
+			"rule-name": "260",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_FLOOR_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "261",
+			"rule-name": "261",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_FLOOR_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "262",
+			"rule-name": "262",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_IB_BR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "263",
+			"rule-name": "263",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_BITEM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "264",
+			"rule-name": "264",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_BITEM_MS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "265",
+			"rule-name": "265",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_BLCK_MS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "266",
+			"rule-name": "266",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_BRAND"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "267",
+			"rule-name": "267",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_BRAND_MS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "268",
+			"rule-name": "268",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_DEPT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "269",
+			"rule-name": "269",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_DEPT_MS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "270",
+			"rule-name": "270",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_SPPRT_MS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "271",
+			"rule-name": "271",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_STORE_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "272",
+			"rule-name": "272",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_STORE_MG1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "273",
+			"rule-name": "273",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_STORE_MG_MS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "274",
+			"rule-name": "274",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_ITGRTN_STORE_MG_MS1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "275",
+			"rule-name": "275",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MDL_DPLY_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "276",
+			"rule-name": "276",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MDL_FRST_DPLY_DT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "277",
+			"rule-name": "277",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MDL_PRC_HSTRY_DWH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "278",
+			"rule-name": "278",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MEDIA_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "279",
+			"rule-name": "279",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MEDIA_GROUP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "280",
+			"rule-name": "280",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MEDIA_MODEL_JOIN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "281",
+			"rule-name": "281",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MODEL_ATTR_TEXT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "282",
+			"rule-name": "282",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MODEL_BASE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "283",
+			"rule-name": "283",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MODEL_DEPLOY_SCHEDULE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "284",
+			"rule-name": "284",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MODEL_DTL_ATTR_TEXT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "285",
+			"rule-name": "285",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MODEL_IN_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "286",
+			"rule-name": "286",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MODEL_TEXT_ATTR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "287",
+			"rule-name": "287",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MS_BLCK_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "288",
+			"rule-name": "288",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MS_BLCK_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "289",
+			"rule-name": "289",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_MS_BLCK_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "290",
+			"rule-name": "290",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PALACE_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "291",
+			"rule-name": "291",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PALACE_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "292",
+			"rule-name": "292",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PALACE_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "293",
+			"rule-name": "293",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PLAN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "294",
+			"rule-name": "294",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PLAN_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "295",
+			"rule-name": "295",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PLAN_MODEL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "296",
+			"rule-name": "296",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_PLU_COPY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "297",
+			"rule-name": "297",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SECTION_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "298",
+			"rule-name": "298",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SECTION_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "299",
+			"rule-name": "299",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SECTION_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "300",
+			"rule-name": "300",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SECTION_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "301",
+			"rule-name": "301",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SEC_MONTH_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "302",
+			"rule-name": "302",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SEC_MONTH_HIST_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "303",
+			"rule-name": "303",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SEC_MONTH_HIST_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "304",
+			"rule-name": "304",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELLDIV_ASMNGR_DPLY_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "305",
+			"rule-name": "305",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELLDIV_ASMNGR_DPLY_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "306",
+			"rule-name": "306",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELLDIV_ASMNGR_DPLY_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "307",
+			"rule-name": "307",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_AS_MNGR_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "308",
+			"rule-name": "308",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_AS_MNGR_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "309",
+			"rule-name": "309",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_AS_MNGR_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "310",
+			"rule-name": "310",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_CHRG_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "311",
+			"rule-name": "311",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_CHRG_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "312",
+			"rule-name": "312",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_CHRG_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "313",
+			"rule-name": "313",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "314",
+			"rule-name": "314",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "315",
+			"rule-name": "315",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "316",
+			"rule-name": "316",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_SHOP_ASSTBL_T"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "317",
+			"rule-name": "317",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_SHOP_AS_ST_BL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "318",
+			"rule-name": "318",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_SHOP_MNGR_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "319",
+			"rule-name": "319",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_SHOP_MNGR_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "320",
+			"rule-name": "320",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_SHOP_MNGR_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "321",
+			"rule-name": "321",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SELL_DIV_SH_AS_ST_BL2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "322",
+			"rule-name": "322",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "323",
+			"rule-name": "323",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_DEPT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "324",
+			"rule-name": "324",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_DEPT_MONTH_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "325",
+			"rule-name": "325",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "326",
+			"rule-name": "326",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_MONTH_HIST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "327",
+			"rule-name": "327",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_MONTH_HIST_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "328",
+			"rule-name": "328",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_MONTH_HIST_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "329",
+			"rule-name": "329",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "330",
+			"rule-name": "330",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SG_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "331",
+			"rule-name": "331",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SHOP_MANAGER_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "332",
+			"rule-name": "332",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SHOP_MANAGER_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "333",
+			"rule-name": "333",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SHOP_MANAGER_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "334",
+			"rule-name": "334",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SKU_DPLY_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "335",
+			"rule-name": "335",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SKU_FRST_DPLY_DT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "336",
+			"rule-name": "336",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SKU_PRC_HSTRY_DWH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "337",
+			"rule-name": "337",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SKU_STORE_PRICE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "338",
+			"rule-name": "338",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SMNGR_GRP_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "339",
+			"rule-name": "339",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SMNGR_GRP_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "340",
+			"rule-name": "340",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SMNGR_GRP_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "341",
+			"rule-name": "341",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SPPRT_MNGR_DPLYSTR_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "342",
+			"rule-name": "342",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SPPRT_MNGR_DPLYSTR_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "343",
+			"rule-name": "343",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SPPRT_MNGR_DPLYSTR_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "344",
+			"rule-name": "344",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SPPRT_MNGR_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "345",
+			"rule-name": "345",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SPPRT_MNGR_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "346",
+			"rule-name": "346",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SPPRT_MNGR_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "347",
+			"rule-name": "347",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SR_AS_FL_SM_BL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "348",
+			"rule-name": "348",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_SR_PL_FL_BL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "349",
+			"rule-name": "349",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STANDARD_COLOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "350",
+			"rule-name": "350",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STANDARD_SIZE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "351",
+			"rule-name": "351",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_CTGLY_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "352",
+			"rule-name": "352",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_CTGLY_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "353",
+			"rule-name": "353",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_CTGLY_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "354",
+			"rule-name": "354",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_GROUP_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "355",
+			"rule-name": "355",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_GROUP_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "356",
+			"rule-name": "356",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_GROUP_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "357",
+			"rule-name": "357",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_GROUP_STORE_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "358",
+			"rule-name": "358",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "359",
+			"rule-name": "359",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "360",
+			"rule-name": "360",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_PURE_999_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "361",
+			"rule-name": "361",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_PURE_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "362",
+			"rule-name": "362",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_PURE_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "363",
+			"rule-name": "363",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_PURE_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "364",
+			"rule-name": "364",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_PURE_TEST2_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "365",
+			"rule-name": "365",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_PURE_TEST_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "366",
+			"rule-name": "366",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_STORE_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "367",
+			"rule-name": "367",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TANA"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "368",
+			"rule-name": "368",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TEAM_BEM_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "369",
+			"rule-name": "369",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TEAM_BEM_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "370",
+			"rule-name": "370",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TEAM_BEM_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "371",
+			"rule-name": "371",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TEAM_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "372",
+			"rule-name": "372",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TEAM_OI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "373",
+			"rule-name": "373",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMS_TEAM_RT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "374",
+			"rule-name": "374",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_DMT_DISS_PRICE_ZONE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "375",
+			"rule-name": "375",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_CPBK_BIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "376",
+			"rule-name": "376",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_CPBK_BL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "377",
+			"rule-name": "377",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_CPBK_DPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "378",
+			"rule-name": "378",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_CPBK_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "379",
+			"rule-name": "379",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_CPSRDPBI_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "380",
+			"rule-name": "380",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_CPSRDPBR_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "381",
+			"rule-name": "381",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_FIG_INANL_03"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "382",
+			"rule-name": "382",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_BK_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "383",
+			"rule-name": "383",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_BK_DPBLBIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "384",
+			"rule-name": "384",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_BK_DPBLBIDI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "385",
+			"rule-name": "385",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_BK_DPBLBIDI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "386",
+			"rule-name": "386",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "387",
+			"rule-name": "387",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DPBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "388",
+			"rule-name": "388",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DPBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "389",
+			"rule-name": "389",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "390",
+			"rule-name": "390",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "391",
+			"rule-name": "391",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "392",
+			"rule-name": "392",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "393",
+			"rule-name": "393",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DP_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "394",
+			"rule-name": "394",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_DP_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "395",
+			"rule-name": "395",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_BK_DPBLBIDI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "396",
+			"rule-name": "396",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_DP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "397",
+			"rule-name": "397",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_DPBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "398",
+			"rule-name": "398",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "399",
+			"rule-name": "399",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_ST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "400",
+			"rule-name": "400",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_STBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "401",
+			"rule-name": "401",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_STBK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "402",
+			"rule-name": "402",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_STBKBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "403",
+			"rule-name": "403",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_STDP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "404",
+			"rule-name": "404",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_ST_DPBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "405",
+			"rule-name": "405",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_ST_DPBIDI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "406",
+			"rule-name": "406",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_MCG_ST_DPBL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "407",
+			"rule-name": "407",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "408",
+			"rule-name": "408",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "409",
+			"rule-name": "409",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "410",
+			"rule-name": "410",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBKBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "411",
+			"rule-name": "411",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBKBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "412",
+			"rule-name": "412",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBKBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "413",
+			"rule-name": "413",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBK_BDGT_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "414",
+			"rule-name": "414",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBK_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "415",
+			"rule-name": "415",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBK_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "416",
+			"rule-name": "416",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STBK_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "417",
+			"rule-name": "417",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STDP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "418",
+			"rule-name": "418",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STDP_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "419",
+			"rule-name": "419",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STDP_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "420",
+			"rule-name": "420",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_ACMLT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "421",
+			"rule-name": "421",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "422",
+			"rule-name": "422",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_BK_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "423",
+			"rule-name": "423",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_BK_DPBLBIDI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "424",
+			"rule-name": "424",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_DP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "425",
+			"rule-name": "425",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_DPBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "426",
+			"rule-name": "426",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "427",
+			"rule-name": "427",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_ST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "428",
+			"rule-name": "428",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_STBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "429",
+			"rule-name": "429",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_STBK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "430",
+			"rule-name": "430",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_STBKBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "431",
+			"rule-name": "431",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_STBK_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "432",
+			"rule-name": "432",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_STDP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "433",
+			"rule-name": "433",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_STG_TODAY_ST_DPBLBIDI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "434",
+			"rule-name": "434",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "435",
+			"rule-name": "435",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_DPBIDI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "436",
+			"rule-name": "436",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_DPBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "437",
+			"rule-name": "437",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_DPBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "438",
+			"rule-name": "438",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_DPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "439",
+			"rule-name": "439",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_DPBL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "440",
+			"rule-name": "440",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "441",
+			"rule-name": "441",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_ST_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "442",
+			"rule-name": "442",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "443",
+			"rule-name": "443",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_BK_DPBLBIDI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "444",
+			"rule-name": "444",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_DP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "445",
+			"rule-name": "445",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_ST"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "446",
+			"rule-name": "446",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_STBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "447",
+			"rule-name": "447",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_STBK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "448",
+			"rule-name": "448",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_STBKBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "449",
+			"rule-name": "449",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_IMC_WCG_STDP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "450",
+			"rule-name": "450",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MAXDAY_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "451",
+			"rule-name": "451",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CPBK_BIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "452",
+			"rule-name": "452",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CPBK_BL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "453",
+			"rule-name": "453",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CPBK_DPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "454",
+			"rule-name": "454",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CPBK_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "455",
+			"rule-name": "455",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CPSRDPBI_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "456",
+			"rule-name": "456",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CPSRDPBR_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "457",
+			"rule-name": "457",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CP_DPBIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "458",
+			"rule-name": "458",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MCG_CP_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "459",
+			"rule-name": "459",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_ALL_SLS_PRCHS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "460",
+			"rule-name": "460",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_ALL_SLS_PRCHS_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "461",
+			"rule-name": "461",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_ALL_SLS_STBL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "462",
+			"rule-name": "462",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_ALL_SLS_STORE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "463",
+			"rule-name": "463",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_AREA_INFO_EMNTH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "464",
+			"rule-name": "464",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_AREA_INFO_FLOOR_EM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "465",
+			"rule-name": "465",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MDI_BDGT_INFO_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "466",
+			"rule-name": "466",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MIN_GRNT_RENT_PTN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "467",
+			"rule-name": "467",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MSS_MD_BK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "468",
+			"rule-name": "468",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MSS_MD_STBK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "469",
+			"rule-name": "469",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_MSS_SK_BK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "470",
+			"rule-name": "470",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_NOTFCTN_PRCS_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "471",
+			"rule-name": "471",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_OWN_CARD_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "472",
+			"rule-name": "472",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PLL_BLCK_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "473",
+			"rule-name": "473",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_AGE_STORE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "474",
+			"rule-name": "474",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_AST_MNGR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "475",
+			"rule-name": "475",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_BLCK_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "476",
+			"rule-name": "476",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_BUYER_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "477",
+			"rule-name": "477",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_DIV_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "478",
+			"rule-name": "478",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_FLOOR_MNGR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "479",
+			"rule-name": "479",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_NEW_BLCK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "480",
+			"rule-name": "480",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_NEW_FLOOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "481",
+			"rule-name": "481",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_NEW_SHOP_BUY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "482",
+			"rule-name": "482",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_NEW_SHOP_DIV"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "483",
+			"rule-name": "483",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_NEW_SHOP_SEC"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "484",
+			"rule-name": "484",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_SECT_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "485",
+			"rule-name": "485",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_SHOP_MNGR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "486",
+			"rule-name": "486",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRCHS_IDX_STORE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "487",
+			"rule-name": "487",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPBK_BIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "488",
+			"rule-name": "488",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPBK_BL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "489",
+			"rule-name": "489",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPBK_DPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "490",
+			"rule-name": "490",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPBK_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "491",
+			"rule-name": "491",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPSRDPBI_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "492",
+			"rule-name": "492",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPSRDPBR_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "493",
+			"rule-name": "493",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPSTBK_DP_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "494",
+			"rule-name": "494",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_CPSTBK_DP_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "495",
+			"rule-name": "495",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "496",
+			"rule-name": "496",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "497",
+			"rule-name": "497",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "498",
+			"rule-name": "498",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRG_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "499",
+			"rule-name": "499",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRICE_ZONE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "500",
+			"rule-name": "500",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_BF0M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "501",
+			"rule-name": "501",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_BF0W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "502",
+			"rule-name": "502",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_BF1M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "503",
+			"rule-name": "503",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_BF1W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "504",
+			"rule-name": "504",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_BF2M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "505",
+			"rule-name": "505",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_BF2W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "506",
+			"rule-name": "506",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_HLM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "507",
+			"rule-name": "507",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_IDX_TRN_ALL_STBL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "508",
+			"rule-name": "508",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_IDX_TRN_ALL_STORE2_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "509",
+			"rule-name": "509",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_IDX_TRN_ALL_STORE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "510",
+			"rule-name": "510",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "511",
+			"rule-name": "511",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_MD_BK_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "512",
+			"rule-name": "512",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_MD_BK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "513",
+			"rule-name": "513",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_MD_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "514",
+			"rule-name": "514",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_MD_STBK_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "515",
+			"rule-name": "515",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_MD_STBK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "516",
+			"rule-name": "516",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_MD_STBK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "517",
+			"rule-name": "517",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_QTM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "518",
+			"rule-name": "518",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_SK_BK_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "519",
+			"rule-name": "519",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_SK_BK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "520",
+			"rule-name": "520",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_SK_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "521",
+			"rule-name": "521",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_PRS_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "522",
+			"rule-name": "522",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_AST_MNGR_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "523",
+			"rule-name": "523",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_AST_MNGR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "524",
+			"rule-name": "524",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_BLCK_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "525",
+			"rule-name": "525",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_BLCK_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "526",
+			"rule-name": "526",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_BUYER_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "527",
+			"rule-name": "527",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_BUYER_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "528",
+			"rule-name": "528",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "529",
+			"rule-name": "529",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_DIV_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "530",
+			"rule-name": "530",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_DIV_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "531",
+			"rule-name": "531",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_FLOOR_MNGR_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "532",
+			"rule-name": "532",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_FLOOR_MNGR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "533",
+			"rule-name": "533",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "534",
+			"rule-name": "534",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_SECT_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "535",
+			"rule-name": "535",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_SECT_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "536",
+			"rule-name": "536",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_SHOP_MNGR_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "537",
+			"rule-name": "537",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_SHOP_MNGR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "538",
+			"rule-name": "538",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_STORE_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "539",
+			"rule-name": "539",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_REVO_FEE_STORE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "540",
+			"rule-name": "540",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKBI_EUL5_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "541",
+			"rule-name": "541",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKBR_EUL5_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "542",
+			"rule-name": "542",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKDI_EUL5_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "543",
+			"rule-name": "543",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKDP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "544",
+			"rule-name": "544",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKDP_EUL5_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "545",
+			"rule-name": "545",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKIT_EUL5_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "546",
+			"rule-name": "546",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKSE_EUL5_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "547",
+			"rule-name": "547",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKSH_EUL5_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "548",
+			"rule-name": "548",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBKSI_EUL5_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "549",
+			"rule-name": "549",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBK_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "550",
+			"rule-name": "550",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBK_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "551",
+			"rule-name": "551",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STBK_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "552",
+			"rule-name": "552",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STDPBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "553",
+			"rule-name": "553",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_STDPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "554",
+			"rule-name": "554",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_RVL_ST_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "555",
+			"rule-name": "555",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPBK_BIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "556",
+			"rule-name": "556",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPBK_BL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "557",
+			"rule-name": "557",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPBK_DPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "558",
+			"rule-name": "558",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPBK_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "559",
+			"rule-name": "559",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPDPBIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "560",
+			"rule-name": "560",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPDPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "561",
+			"rule-name": "561",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPSRDPBI_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "562",
+			"rule-name": "562",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPSRDPBR_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "563",
+			"rule-name": "563",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPSTBK_DP_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "564",
+			"rule-name": "564",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_CPSTBK_DP_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "565",
+			"rule-name": "565",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "566",
+			"rule-name": "566",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "567",
+			"rule-name": "567",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "568",
+			"rule-name": "568",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAG_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "569",
+			"rule-name": "569",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF012W_BF1M_CLR_BI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "570",
+			"rule-name": "570",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF012W_BF1M_CLR_I"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "571",
+			"rule-name": "571",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF012W_BF1M_CLR_SBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "572",
+			"rule-name": "572",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF012W_BF1M_CLR_SI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "573",
+			"rule-name": "573",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "574",
+			"rule-name": "574",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0M_TO_BF3M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "575",
+			"rule-name": "575",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "576",
+			"rule-name": "576",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0W_TO_BF3W_BF1M_BI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "577",
+			"rule-name": "577",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0W_TO_BF3W_BF1M_I"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "578",
+			"rule-name": "578",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0W_TO_BF3W_BF1M_SBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "579",
+			"rule-name": "579",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0W_TO_BF3W_BF1M_SI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "580",
+			"rule-name": "580",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF0W_TO_BF6W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "581",
+			"rule-name": "581",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF1M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "582",
+			"rule-name": "582",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF1W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "583",
+			"rule-name": "583",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF2M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "584",
+			"rule-name": "584",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF2W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "585",
+			"rule-name": "585",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF3M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "586",
+			"rule-name": "586",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF3W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "587",
+			"rule-name": "587",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF4W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "588",
+			"rule-name": "588",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF5W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "589",
+			"rule-name": "589",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_BF6W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "590",
+			"rule-name": "590",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_HLM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "591",
+			"rule-name": "591",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_HLM_QTM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "592",
+			"rule-name": "592",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "593",
+			"rule-name": "593",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_MD_BK_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "594",
+			"rule-name": "594",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_MD_BK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "595",
+			"rule-name": "595",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_MD_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "596",
+			"rule-name": "596",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_MD_STBK_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "597",
+			"rule-name": "597",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_MD_STBK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "598",
+			"rule-name": "598",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_MD_STBK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "599",
+			"rule-name": "599",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_QTM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "600",
+			"rule-name": "600",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_SK_BK_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "601",
+			"rule-name": "601",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_SK_BK_DPBLBI_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "602",
+			"rule-name": "602",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_SK_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "603",
+			"rule-name": "603",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SAS_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "604",
+			"rule-name": "604",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKPRCHS_STRM_BK_DPBLBI_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "605",
+			"rule-name": "605",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKPRCHS_STRM_BK_DPBLBI_SK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "606",
+			"rule-name": "606",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKPRCHS_STRM_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "607",
+			"rule-name": "607",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKPRCHS_STRM_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "608",
+			"rule-name": "608",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKPRCHS_STRM_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "609",
+			"rule-name": "609",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSLS_STRM_BK_DPBLBI_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "610",
+			"rule-name": "610",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSLS_STRM_BK_DPBLBI_SK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "611",
+			"rule-name": "611",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSLS_STRM_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "612",
+			"rule-name": "612",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSLS_STRM_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "613",
+			"rule-name": "613",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSLS_STRM_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "614",
+			"rule-name": "614",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSTCK_STRM_BK_DPBLBI_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "615",
+			"rule-name": "615",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSTCK_STRM_BK_DPBLBI_SK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "616",
+			"rule-name": "616",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSTCK_STRM_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "617",
+			"rule-name": "617",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSTCK_STRM_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "618",
+			"rule-name": "618",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKSTCK_STRM_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "619",
+			"rule-name": "619",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKU_FRST_DPLY_DT_MD"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "620",
+			"rule-name": "620",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SKU_FRST_DPLY_DT_SK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "621",
+			"rule-name": "621",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SSS_MNTH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "622",
+			"rule-name": "622",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SSS_QH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "623",
+			"rule-name": "623",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_SSS_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "624",
+			"rule-name": "624",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_BI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "625",
+			"rule-name": "625",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_BLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "626",
+			"rule-name": "626",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_CLR_BI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "627",
+			"rule-name": "627",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_CLR_BLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "628",
+			"rule-name": "628",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_CLR_STBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "629",
+			"rule-name": "629",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_CLR_STBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "630",
+			"rule-name": "630",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_STBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "631",
+			"rule-name": "631",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STCK_SKU_MG_STBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "632",
+			"rule-name": "632",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STG_ACMLT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "633",
+			"rule-name": "633",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STG_CPSTBK_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "634",
+			"rule-name": "634",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STG_CPST_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "635",
+			"rule-name": "635",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STT_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "636",
+			"rule-name": "636",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STT_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "637",
+			"rule-name": "637",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STT_MD_CARD_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "638",
+			"rule-name": "638",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_STT_YW"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "639",
+			"rule-name": "639",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_PURCHASE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "640",
+			"rule-name": "640",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_PURCHASE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "641",
+			"rule-name": "641",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_USER_INFO_STBL_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "642",
+			"rule-name": "642",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_USER_INFO_STBL_OR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "643",
+			"rule-name": "643",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_USER_INFO_STBL_OR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "644",
+			"rule-name": "644",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_USER_INFO_STORE_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "645",
+			"rule-name": "645",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_USER_INFO_ST_OR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "646",
+			"rule-name": "646",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_ALL_USER_INFO_ST_OR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "647",
+			"rule-name": "647",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_PURCHASE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "648",
+			"rule-name": "648",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_PURCHASE_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "649",
+			"rule-name": "649",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_PURCHASE_PARTITION"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "650",
+			"rule-name": "650",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_PZ_SALES_M_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "651",
+			"rule-name": "651",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_ST_SEX_GNRTN_BLCK_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "652",
+			"rule-name": "652",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TNT_ADJUST_CYCLE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "653",
+			"rule-name": "653",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TNT_ADJUST_TIMING"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "654",
+			"rule-name": "654",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TNT_PERIOD_NOTICE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "655",
+			"rule-name": "655",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TNT_RENT_CALC_PTN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "656",
+			"rule-name": "656",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TSTA_STOCK_DEPT_CRPRT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "657",
+			"rule-name": "657",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TSTA_STOCK_DEPT_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "658",
+			"rule-name": "658",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_TSTA_STOCK_SGRP_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "659",
+			"rule-name": "659",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CPBK_BIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "660",
+			"rule-name": "660",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CPBK_BL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "661",
+			"rule-name": "661",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CPBK_DPBL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "662",
+			"rule-name": "662",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CPBK_DP_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "663",
+			"rule-name": "663",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CPSRDPBI_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "664",
+			"rule-name": "664",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CPSRDPBR_PLFL_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "665",
+			"rule-name": "665",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CP_DPBIDI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "666",
+			"rule-name": "666",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WCG_CP_DPBLBI_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "667",
+			"rule-name": "667",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_BF1_NUM_OF_CUSTOMER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "668",
+			"rule-name": "668",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_CMNTY_RGST_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "669",
+			"rule-name": "669",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_COUPON_REISSUE_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "670",
+			"rule-name": "670",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_DATE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "671",
+			"rule-name": "671",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_DAY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "672",
+			"rule-name": "672",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_EASY_MEMBER_CLASS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "673",
+			"rule-name": "673",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_FISCAL_YEAR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "674",
+			"rule-name": "674",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_FISCAL_YEAR_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "675",
+			"rule-name": "675",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_HALF_YEAR_TERM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "676",
+			"rule-name": "676",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_HALF_YEAR_TERM_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "677",
+			"rule-name": "677",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_LINE_CNNCT_STATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "678",
+			"rule-name": "678",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_MONTH"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "679",
+			"rule-name": "679",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_MONTH_TERM_WEEK_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "680",
+			"rule-name": "680",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_MONTH_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "681",
+			"rule-name": "681",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_MTH_TM_WEEK_NO_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "682",
+			"rule-name": "682",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_NUM_OF_CUSTOMER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "683",
+			"rule-name": "683",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_QRTR_YEAR_TERM_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "684",
+			"rule-name": "684",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_QUARTER_YEAR_TERM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "685",
+			"rule-name": "685",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_RECEIVE_STOP_REASON"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "686",
+			"rule-name": "686",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_WEEK_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "687",
+			"rule-name": "687",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_WEEK_NO_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "688",
+			"rule-name": "688",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_YEAR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "689",
+			"rule-name": "689",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_YEAR_TERM_WEEK_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "690",
+			"rule-name": "690",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WEB_YR_TM_WEEK_NO_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "691",
+			"rule-name": "691",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WK_BFHF_MONTH_CODE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "692",
+			"rule-name": "692",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WK_BFR_MONTH_CODE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "693",
+			"rule-name": "693",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WK_BFST_MONTH_CODE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "694",
+			"rule-name": "694",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WK_CST_MONTH_CODE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "695",
+			"rule-name": "695",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WK_HFYR_MONTH_CODE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "696",
+			"rule-name": "696",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WK_MONTH_CODE_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "697",
+			"rule-name": "697",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WMS_WEB_CPN_USE_STATUS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "698",
+			"rule-name": "698",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WSS_MD_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "699",
+			"rule-name": "699",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WSS_MD_STBK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "700",
+			"rule-name": "700",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MVW_WSS_SK_BK_DPBLBI_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "701",
+			"rule-name": "701",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_DM_PURCHASE_INDEX"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "702",
+			"rule-name": "702",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_AGE_STORE_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "703",
+			"rule-name": "703",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_AST_MNGR_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "704",
+			"rule-name": "704",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_BLCK_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "705",
+			"rule-name": "705",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_BUYER_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "706",
+			"rule-name": "706",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_DIV_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "707",
+			"rule-name": "707",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_FLOOR_MNGR_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "708",
+			"rule-name": "708",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_SECT_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "709",
+			"rule-name": "709",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_SHOP_MNGR_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "710",
+			"rule-name": "710",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_PRCHS_IDX_STORE_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "711",
+			"rule-name": "711",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_AST_MNGR_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "712",
+			"rule-name": "712",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_BLCK_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "713",
+			"rule-name": "713",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_BUYER_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "714",
+			"rule-name": "714",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_DIV_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "715",
+			"rule-name": "715",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_FLOOR_MNGR_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "716",
+			"rule-name": "716",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "717",
+			"rule-name": "717",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_SECT_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "718",
+			"rule-name": "718",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_SHOP_MNGR_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "719",
+			"rule-name": "719",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "WK_REVO_FEE_STORE_M_REAL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "720",
+			"rule-name": "720",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_AMNGR_GP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "721",
+			"rule-name": "721",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_ASSISTANT_MANAGE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "722",
+			"rule-name": "722",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_ASSISTANT_MANAGE1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "723",
+			"rule-name": "723",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BITEM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "724",
+			"rule-name": "724",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BITEM_GDS_BGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "725",
+			"rule-name": "725",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BITEM_GDS_LGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "726",
+			"rule-name": "726",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BITEM_GDS_MGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "727",
+			"rule-name": "727",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BLCK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "728",
+			"rule-name": "728",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BRAND"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "729",
+			"rule-name": "729",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_BUYER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "730",
+			"rule-name": "730",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_CORPORATE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "731",
+			"rule-name": "731",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_DAY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "732",
+			"rule-name": "732",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_DEPT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "733",
+			"rule-name": "733",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_DEPT_GDS_BGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "734",
+			"rule-name": "734",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_DEPT_GDS_LGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "735",
+			"rule-name": "735",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_DEPT_GDS_MGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "736",
+			"rule-name": "736",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_DIVISION"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "737",
+			"rule-name": "737",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_FLOOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "738",
+			"rule-name": "738",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_FLOOR_MANAGER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "739",
+			"rule-name": "739",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_ITGRTN_BLCK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "740",
+			"rule-name": "740",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_PALACE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "741",
+			"rule-name": "741",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_PURCHASE_FORM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "742",
+			"rule-name": "742",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SECTION"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "743",
+			"rule-name": "743",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SELL_DIV"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "744",
+			"rule-name": "744",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SELL_DIV_AS_MNGR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "745",
+			"rule-name": "745",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SELL_DIV_AS_MNGR1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "746",
+			"rule-name": "746",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SELL_DIV_CHRG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "747",
+			"rule-name": "747",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SELL_DIV_SHOP_MN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "748",
+			"rule-name": "748",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "749",
+			"rule-name": "749",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SHOP_MANAGER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "750",
+			"rule-name": "750",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SL_RDC_SGRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "751",
+			"rule-name": "751",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SMNGR_GRP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "752",
+			"rule-name": "752",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SPPRT_MNGR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "753",
+			"rule-name": "753",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_STORE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "754",
+			"rule-name": "754",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_STORE_CTGLY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "755",
+			"rule-name": "755",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_STORE_GROUP"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "756",
+			"rule-name": "756",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_STORE_GROUP_STOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "757",
+			"rule-name": "757",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_SUPPLIER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "758",
+			"rule-name": "758",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_TEAM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "759",
+			"rule-name": "759",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_TEAM_BEM"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "760",
+			"rule-name": "760",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_WEEK_NO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "761",
+			"rule-name": "761",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_WK_DCF"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "762",
+			"rule-name": "762",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMS_YEAR_TERM_WEEK_N"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "763",
+			"rule-name": "763",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_ALL_FADV_INFO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "764",
+			"rule-name": "764",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_ALL_SLS_DETAILS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "765",
+			"rule-name": "765",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_DISST_PRICE_ZONE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "766",
+			"rule-name": "766",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_HSSBS_PLCE_FLOR_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "767",
+			"rule-name": "767",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_IMC_MCG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "768",
+			"rule-name": "768",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_IMC_WCG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "769",
+			"rule-name": "769",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_INTGRTN_MTRC_CLS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "770",
+			"rule-name": "770",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_MDI_ALL_SLS_STBL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "771",
+			"rule-name": "771",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_MDI_ALL_SLS_STOR"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "772",
+			"rule-name": "772",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_AGE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "773",
+			"rule-name": "773",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_AST_MN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "774",
+			"rule-name": "774",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_BLCK_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "775",
+			"rule-name": "775",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_BUYER_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "776",
+			"rule-name": "776",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_DIV_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "777",
+			"rule-name": "777",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_FLOOR_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "778",
+			"rule-name": "778",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_SECT_D"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "779",
+			"rule-name": "779",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_SHOP_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "780",
+			"rule-name": "780",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRCHS_IDX_STORE_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "781",
+			"rule-name": "781",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRS_IDX_TRN_ALL_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "782",
+			"rule-name": "782",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRS_IDX_TRN_ALL_1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "783",
+			"rule-name": "783",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_PRS_IDX_TRN_ALL_2"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "784",
+			"rule-name": "784",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_RETRIEVAL_DAILY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "785",
+			"rule-name": "785",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_RETRIEVAL_MONTHL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "786",
+			"rule-name": "786",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_RETRIEVAL_WEEKLY"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "787",
+			"rule-name": "787",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "788",
+			"rule-name": "788",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_AST_MNG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "789",
+			"rule-name": "789",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_BLCK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "790",
+			"rule-name": "790",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_BUYER"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "791",
+			"rule-name": "791",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_DIV"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "792",
+			"rule-name": "792",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_FLOOR_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "793",
+			"rule-name": "793",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_SECT"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "794",
+			"rule-name": "794",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_SHOP_MN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "795",
+			"rule-name": "795",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_REVO_FEE_STORE"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "796",
+			"rule-name": "796",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_ST_ALL_USER_INFO"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "797",
+			"rule-name": "797",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_ST_ALL_USER_INFO1"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "798",
+			"rule-name": "798",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_ST_PZ_SALES_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "799",
+			"rule-name": "799",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_DMT_ST_SEX_GNRTN_BLC"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "800",
+			"rule-name": "800",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_ACGPRD_STCK_CLSS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "801",
+			"rule-name": "801",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_ACGPRD_STCK_SKU_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "802",
+			"rule-name": "802",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_ACHVMNT_FADV_SKU"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "803",
+			"rule-name": "803",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_ACMLT_PRCHS_SKU_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "804",
+			"rule-name": "804",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_ACMLT_SLS_SKU_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "805",
+			"rule-name": "805",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_FADV_INFO_CLSS_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "806",
+			"rule-name": "806",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_PRCHS_CLSS_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "807",
+			"rule-name": "807",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_PRCHS_SKU_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "808",
+			"rule-name": "808",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_SLS_ACTRST_CLSS_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "809",
+			"rule-name": "809",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_SLS_ACTRST_SKU_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "810",
+			"rule-name": "810",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_SLS_STTSTCS"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "811",
+			"rule-name": "811",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_STCKCLSS_MG_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "812",
+			"rule-name": "812",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_STCK_CLSS_MG"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "813",
+			"rule-name": "813",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_FCT_STCK_SKU_MG_WEEK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "814",
+			"rule-name": "814",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_IMC_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "815",
+			"rule-name": "815",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_IMC_M_WK"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "816",
+			"rule-name": "816",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_IMC_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "817",
+			"rule-name": "817",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_PRG_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "818",
+			"rule-name": "818",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_PRG_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "819",
+			"rule-name": "819",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_PRS_MD_BK_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "820",
+			"rule-name": "820",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_PRS_MD_STBK_DPBL"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "821",
+			"rule-name": "821",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_PRS_SK_BK_DPBLBI"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "822",
+			"rule-name": "822",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_SAG_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "823",
+			"rule-name": "823",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_SAG_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "824",
+			"rule-name": "824",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_SAS_M"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "825",
+			"rule-name": "825",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_MVW_SAS_W"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "826",
+			"rule-name": "826",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_WK_AGE_GENERATION"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "827",
+			"rule-name": "827",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_WK_DISST_HSSBS_PLCE_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "828",
+			"rule-name": "828",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_WK_DISS_ACGPRD_STCK_"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "829",
+			"rule-name": "829",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_WK_IMC_MONTH_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "830",
+			"rule-name": "830",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_WK_IMC_WEEK_TFN"
+			},
+			"rule-action": "exclude"
+		},
+		{
+			"rule-type": "selection",
+			"rule-id": "831",
+			"rule-name": "831",
+			"object-locator": {
+				"schema-name": "MISDATA",
+				"table-name": "MLOG$_WK_SELL_TITLE_CLASS"
+			},
+			"rule-action": "exclude"
+		}
+	]
+}
